@@ -1,2 +1,2 @@
-# vzL95
-website inspired by windows 95 
+# vzL98
+website inspired by windows 98
