@@ -6,8 +6,9 @@ html, body{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	overflow: hidden;
+	overflow: hidden;  
 }
+
 /*bloquear seleccion de texto en navegadores*/
 .disable-select {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -30,12 +31,16 @@ html, body{
 .window{
     position: absolute;
 }
-#ventan_1{
+#ventan_alert{
     left: 100px;
     top: 100px;
 }
-#ventan_2{
+#ventan_credits{
     left: 100px;
+    top: 500px;
+}
+#ventan_terminal{
+    left: 200px;
     top: 500px;
 }
 #overlay {

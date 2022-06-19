@@ -1,3 +1,14 @@
+<!--
+
+██╗   ██╗███████╗██╗          █████╗  █████╗ 
+██║   ██║╚══███╔╝██║         ██╔══██╗██╔══██╗
+██║   ██║  ███╔╝ ██║         ╚██████║╚█████╔╝
+╚██╗ ██╔╝ ███╔╝  ██║          ╚═══██║██╔══██╗
+ ╚████╔╝ ███████╗███████╗     █████╔╝╚█████╔╝
+  ╚═══╝  ╚══════╝╚══════╝     ╚════╝  ╚════╝ 
+                                                                                               
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,26 +19,25 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-
+    <link rel='stylesheet' type="text/css" href='css/win98.css'>
 
 </head>
 
 <body>
-
     <div class="disable-select">
         <div class="machine">
 
-            <div class="apps"></div>
+            
             <div class="exe" onclick="">
                 <img class="icons" src="windows98-icons/png/hard_disk_drive_cool-5.png" />
                 <p>
                     system (c:)
                 </p>
             </div>
-            <div class="exe" onclick="">
+            <div class="exe" onclick="Abrir4()">
                 <img class="icons" src="windows98-icons/png/connected_world-0.png" />
                 <p>
-                    about
+                    about.exe
                 </p>
             </div>
             <div class="exe" onclick="">
@@ -57,13 +67,13 @@
                     </p>
                 </div>
 
-                <div class="exe" onclick="">
+                <div class="exe" onclick="Abrir3()">
                     <img class="icons" src="windows98-icons/png/console_prompt-0.png" />
                     <p>
                         terminal
                     </p>
                 </div>
-                <div class="exe" onclick="">
+                <div class="exe" onclick="Abrir2()">
                     <img class="icons" src="windows98-icons/png/notepad_file-0.png" />
                     <p>
                         credits.txt
@@ -96,24 +106,39 @@
                 </div>
         </div>
 
+        <div class="window" style="width: 320px" id="ventan_about">
+            <div class="title-bar">
+              <div class="title-bar-text">about.exe</div>
+              <div class="title-bar-controls">
+                <button aria-label="Close" id="Close4"></button>
+              </div>
+            </div>
+            <p>Hi! i'm Oscar</p>
+            <p>i am a Computer Systems engineer (not yet u.u) trying to get a job lol</p>
+            <div class="status-bar">
+              <p class="status-bar-field">Press F1 for help</p>
+              <p class="status-bar-field">Slide 1</p>
+              <p class="status-bar-field">CPU Usage: 54%</p>
+            </div>
+          </div>
 
-        <div class="window" id="ventan_1" style="margin: 32px; width: 250px ">
+        <div class="window" id="ventan_alert" style="margin: 32px; width: 270px ">
             <div class="title-bar">
                 <div class="title-bar-text">
                     visual sucios alert!
                 </div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
+                    
+                    <button aria-label="Close" id="Close1"></button>
                 </div>
             </div>
             <div class="window-body">
                 <p>welcome 2 my page</p>
                 <p>u wanna know bout me? well here you go</p>
                 <div class="field-row">
-                    <label for="text21">name: </label>
-                    <input id="text21" disabled type="text" value="oscar AKA-47" />
+                    <label for="text21">nickname: </label>
+                    <input id="text21" disabled type="text" value="140hz " />
+                    <button id="nicknameTXT">more</button>
                 </div>
                 <p>thats all, here r my socials</p>
 
@@ -121,13 +146,15 @@
             </div>
         </div>
 
-        <div class="window" id="ventan_2" style="width: 360px">
+       
+
+        <div class="window" id="ventan_credits" style="width: 360px">
             <div class="title-bar">
                 <div class="title-bar-text">credits.txt</div>
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
                     <button aria-label="Maximize"></button>
-                    <button aria-label="Close"></button>
+                    <button aria-label="Close" id="Close2"></button>
                 </div>
             </div>
             <div class="window-body">
@@ -149,15 +176,122 @@
 
             </div>
         </div>
-        <!--
-            <button id="LearnMoreBtn">Learn More</a>
-            <div id="overlay"></div>
-            <div id="popup">
-                Popup contents here
+
+
+        <div class="window" id="ventan_terminal">
+            <div class="title-bar">
+              <div class="title-bar-text">Command Prompt</div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close" id="Close3"></button>
+              </div>
             </div>
-        -->
-
-
+            <div class="window-body">
+              <pre>Microsoft&#10094;R&#10095; Windows DOS 
+          &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+                <br>C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily with a window and pre tag
+              </pre>
+            </div>
+          </div>
+          
+        <!--
+         
+        
+          <div class="menu">
+            <div class="menu-sidebar">
+                <div class="headline">
+                    <strong>Windows</strong> 98
+                </div>
+            </div>
+            <ul class='menu-content'>
+                <li class='item folder'>
+                    <img class='icon' src='icons/programs.gif' />
+                    Programs
+                    <ul class='menu-content'>
+                        <li class="item">
+                            <img class='icon' src='icons/exe.gif' />
+                            Internet Explorer
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/exe.gif' />
+                            Microsoft Word
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/exe.gif' />
+                            Microsoft Excel
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/exe.gif' />
+                            Microsoft Powerpoint
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/exe.gif' />
+                            Microsoft Access
+                        </li>
+                    </ul>
+                </li>
+                <li class='item folder'>
+                    <img class='icon' src='icons/favourites.gif' />
+                    Favorites
+                    <ul class='menu-content'>
+                        <li class="item">
+                            <img class='icon' src='icons/documents.gif' />
+                            Channels
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/documents.gif' />
+                            Links
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/documents.gif' />
+                            Software Updates
+                        </li>
+                    </ul>
+                </li>
+                <li class='item folder'>
+                    <img class='icon' src='icons/documents.gif' />
+                    Documents
+                    <ul class='menu-content'>
+                        <li class="item">
+                            <img class='icon' src='icons/txt.gif' />
+                            Hot grills.txt
+                        </li>
+                        <li class="item">
+                            <img class='icon' src='icons/txt.gif' />
+                            Passwords.txt
+                        </li>
+                    </ul>
+                </li>
+                <li class='item folder'>
+                    <img class='icon' src='icons/settings.gif' />
+                    Settings
+                </li>
+                <li class='item folder'>
+                    <img class='icon' src='icons/find.gif' />
+                    Find
+                </li>
+                <li class='item'>
+                    <img class='icon' src='icons/help.gif' />
+                    Help
+                </li>
+                <li class='item'>
+                    <img class='icon' src='icons/run.gif' />
+                    Run...
+                </li>
+                <li class='divider'></li>
+                <li class='item'>
+                    <img class='icon' src='icons/logoff.gif' />
+                    Log Off Win98...
+                </li>
+                <li class='item'>
+                    <img class='icon' src='icons/shutdown.gif' />
+                    Shut Down...
+                </li>
+            </ul>
+        </div>
+    -->
+        
         <script type="text/javascript" src="js/script.js"></script>
     </div>
 </body>
