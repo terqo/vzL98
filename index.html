@@ -14,10 +14,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>vzL 95</title>
+    <title>vzL 98</title>
     <link rel="icon" href="images/VSChromeLogo0001-0180.gif">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <link rel='stylesheet' type="text/css" href='css/win98.css'>
 
@@ -27,175 +27,278 @@
     <div class="disable-select">
         <div class="machine">
 
-            
-            <div class="exe" onclick="">
-                <img class="icons" src="windows98-icons/png/hard_disk_drive_cool-5.png" />
+
+            <div class="exe">
+                <img class="icons" onclick="Abrir6()" src="windows98-icons/png/hard_disk_drive_cool-5.png" />
                 <p>
                     system (c:)
                 </p>
             </div>
-            <div class="exe" onclick="Abrir4()">
-                <img class="icons" src="windows98-icons/png/connected_world-0.png" />
-                <p>
-                    about.exe
-                </p>
-            </div>
-            <div class="exe" onclick="">
-                <img class="icons" src="windows98-icons/png/directory_closed_cool-2.png" />
-                <p>
-                    documents
-                </p>
-            </div>
-            <div class="exe" onclick="">
-                <img class="icons" src="windows98-icons/png/defragment-0.png" />
-                <p>
-                    3D Art (?)
-                </p>
-            </div>
+
             <div class="exe" onclick="">
                 <img class="icons" src="windows98-icons/png/msagent-3.png" />
                 <p>
                     FBI OPEN UP
                 </p>
             </div>
-            <a href="https://visualsucios.netlify.app/" target="_blank">
-                <div class="exe" onclick="">
-                    <img class="icons" src="/windows98-icons/png/msie2-5.png" />
-                    <a href="https://visualsucios.netlify.app/" target="_blank"></a>
-                    <p>
-                        vzL v1
-                    </p>
-                </div>
 
-                <div class="exe" onclick="Abrir3()">
-                    <img class="icons" src="windows98-icons/png/console_prompt-0.png" />
-                    <p>
-                        terminal
-                    </p>
-                </div>
-                <div class="exe" onclick="Abrir2()">
-                    <img class="icons" src="windows98-icons/png/notepad_file-0.png" />
-                    <p>
-                        credits.txt
-                    </p>
-                </div>
+            <div class="exe" onclick="">
+                <img class="icons" src="/windows98-icons/png/msie2-5.png" />
+                <a href="https://visualsucios.netlify.app/" target="_blank"></a>
+                <p>
+                    vzL v1
+                </p>
+            </div>
 
-                <div class="exe" onclick="">
-                    <img class="icons" src="windows98-icons/png/recycle_bin_full_cool-5.png" />
-                    <p>
-                        trash
-                    </p>
-                </div>
+            <div class="exe" onclick="">
+                <img class="icons" src="windows98-icons/png/recycle_bin_full_cool-5.png" />
+                <p>
+                    trash
+                </p>
+            </div>
 
-                <div class="barra">
-                    <button class="inicioBtn">
-                        <img src="windows98-icons/png/windows-4.png"> Start
-                    </button>
-                    <div class="barra-division"></div>
-                    <!--
+            <div class="barra">
+                <button class="inicioBtn">
+                    <img src="windows98-icons/png/windows-4.png"> Start
+                </button>
+                <div class="barra-division"></div>
+                <!--
                         DESPUES, AQUI VAN LAS APLICACIONES O ARCHIVOS EXE 
                         DE LA BARRA
                     -->
-                    <div class="barra-exe"></div>
-                    <div class="barra-division"></div>
-                    <div class="bandeja">
-                        <div class="barra-reloj" id="reloj">
-                            12:00
+                <div class="barra-exe"></div>
+                <div class="barra-division"></div>
+                <div class="bandeja">
+                    <div class="barra-reloj" id="reloj">
+                        12:00
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="window" id="ventan_sys" style="width: 400px">
+                <div class="title-bar">
+                    <div class="title-bar-text">system(c:)</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close" id="Close6"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <ul class="tree-view" style="display: flex; align-items: center;padding: 15px;">
+
+                        <div class="exe" onclick="Abrir7()">
+                            <img class="icons" src="windows98-icons/png/directory_closed_cool-2.png" />
+                            <p style="color: black;">
+                                documents
+                            </p>
                         </div>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="window" id="ventan_document" style="width: 400px">
+                <div class="title-bar">
+                    <div class="title-bar-text">documents</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close" id="Close7"></button>
                     </div>
                 </div>
-        </div>
+                <div class="window-body">
+                    <ul class="tree-view" style="display: flex; align-items: center;padding: 15px;">
 
-        <div class="window" style="width: 320px" id="ventan_about">
-            <div class="title-bar">
-              <div class="title-bar-text">about.exe</div>
-              <div class="title-bar-controls">
-                <button aria-label="Close" id="Close4"></button>
-              </div>
-            </div>
-            <p>Hi! i'm Oscar</p>
-            <p>i am a Computer Systems engineer (not yet u.u) trying to get a job lol</p>
-            <div class="status-bar">
-              <p class="status-bar-field">Press F1 for help</p>
-              <p class="status-bar-field">Slide 1</p>
-              <p class="status-bar-field">CPU Usage: 54%</p>
-            </div>
-          </div>
-
-        <div class="window" id="ventan_alert" style="margin: 32px; width: 270px ">
-            <div class="title-bar">
-                <div class="title-bar-text">
-                    visual sucios alert!
-                </div>
-                <div class="title-bar-controls">
-                    
-                    <button aria-label="Close" id="Close1"></button>
-                </div>
-            </div>
-            <div class="window-body">
-                <p>welcome 2 my page</p>
-                <p>u wanna know bout me? well here you go</p>
-                <div class="field-row">
-                    <label for="text21">nickname: </label>
-                    <input id="text21" disabled type="text" value="140hz " />
-                    <button id="nicknameTXT">more</button>
-                </div>
-                <p>thats all, here r my socials</p>
-
-                <p>buuttt, if u really wanna kno more bout me,<br> click here</p>
-            </div>
-        </div>
-
-       
-
-        <div class="window" id="ventan_credits" style="width: 360px">
-            <div class="title-bar">
-                <div class="title-bar-text">credits.txt</div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Close" id="Close2"></button>
+                        <div class="exe" onclick="Abrir4()">
+                            <img class="icons" src="windows98-icons/png/connected_world-0.png" />
+                            <p style="color: black;">
+                                about.exe
+                            </p>
+                        </div>
+                        <div class="exe" onclick="Abrir5()">
+                            <img class="icons" src="windows98-icons/png/defragment-0.png" />
+                            <p style="color: black;">
+                                3D Art (?)
+                            </p>
+                        </div>
+                        <div class="exe" onclick="Abrir3()">
+                            <img class="icons" src="windows98-icons/png/console_prompt-0.png" />
+                            <p style="color: black;">
+                                terminal
+                            </p>
+                        </div>
+                        <div class="exe" onclick="Abrir2()">
+                            <img class="icons" src="windows98-icons/png/notepad_file-0.png" />
+                            <p style="color: black;">
+                                credits.txt
+                            </p>
+                        </div>
+                    </ul>
                 </div>
             </div>
-            <div class="window-body">
-                <ul class="tree-view">
-                    <div>
-                        <li><b>Team</b></li>
-                        <li>me, myself & i </li>
-                        <li>oscar : <a href="http://twitter.com/fvckoscqr" target="_blank">@fvckoscqr</a></li>
+
+            <div class="window" id="ventan_about">
+                <div class="title-bar">
+                    <div class="title-bar-text">about.exe</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="Close4"></button>
                     </div>
-                    <br>
-                    <div>
-                        <li><b>Sources</b></li>
-                        <li> <a href="https://jdan.github.io/98.css/#button" target="_blank">98.css</a>| A design system
-                            for building faithful recreations of old UIs.</li>
+                </div>
+                <p>Hi! i'm Oscar</p>
+                <p>i am a Computer Systems engineer (not yet u.u) trying to get a job lol</p>
+                <div class="status-bar">
+                    <p class="status-bar-field">Press F1 for help</p>
+                    <p class="status-bar-field">Slide 1</p>
+                    <p class="status-bar-field">CPU Usage: 54%</p>
+                </div>
+            </div>
 
+            <div class="window" style="width: 350px;" id="ventan_3d">
+                <div class="title-bar">
+                    <div class="title-bar-text">3DArt.exe</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="Close5"></button>
                     </div>
+                </div>
+                <div class="ventan_3d">
+                    <model-viewer bounds="tight" src="3dFiles/Scan3D_20220624021341.glb" ar
+                        ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                        poster="poster.webp" shadow-intensity="1.6" exposure="2">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
 
-                </ul>
+                    </model-viewer>
 
+                    <model-viewer bounds="tight" src="3dFiles/airpods.glb" ar ar-modes="webxr scene-viewer quick-look"
+                        camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.6"
+                        exposure="2">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+
+                    </model-viewer>
+
+                    <model-viewer bounds="tight" src="3dFiles/PAINT98.glb" ar ar-modes="webxr scene-viewer quick-look"
+                        camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.6"
+                        exposure="2">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+
+                    </model-viewer>
+
+                    <model-viewer bounds="tight" src="3dFiles/smgBurbujadeCristal.glb" ar
+                        ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                        poster="poster.webp" shadow-intensity="1.6" exposure="2">
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+
+                    </model-viewer>
+                </div>
+
+                <div class="status-bar">
+                    <p class="status-bar-field">Press F1 for help</p>
+                    <p class="status-bar-field">Slide 1</p>
+                    <p class="status-bar-field">CPU Usage: 54%</p>
+                </div>
             </div>
-        </div>
 
+            <div class="window" id="ventan_alert" style="margin: 32px; width: 270px ">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        visual sucios alert!
+                    </div>
+                    <div class="title-bar-controls">
 
-        <div class="window" id="ventan_terminal">
-            <div class="title-bar">
-              <div class="title-bar-text">Command Prompt</div>
-              <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close" id="Close3"></button>
-              </div>
+                        <button aria-label="Close" id="Close1"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p>welcome 2 my page</p>
+                    <p>u wanna know bout me? well here you go</p>
+                    <div class="field-row">
+                        <label for="text21">nicknames: </label>
+                        <input id="nicknames" disabled type="text" value="140hz " />
+                        <button onclick="nicknames()">more</button>
+                    </div>
+                    <p>thats all, here r my socials</p>
+
+                    <p>buuttt, if u really wanna kno more bout me,<br> click here</p>
+                </div>
             </div>
-            <div class="window-body">
-              <pre>Microsoft&#10094;R&#10095; Windows DOS 
-          &#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
-                <br>C:&#92;WINDOWS&#92;SYSTEM32> You can build a command line easily with a window and pre tag
-              </pre>
+
+            <div class="window" id="ventan_credits" style="width: 360px">
+                <div class="title-bar">
+                    <div class="title-bar-text">credits.txt</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close" id="Close2"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <ul class="tree-view">
+                        <div>
+                            <li><b>Team</b></li>
+                            <li>me, myself & i </li>
+                            <li>oscar : <a href="http://twitter.com/fvckoscqr" target="_blank">@fvckoscqr</a></li>
+                        </div>
+                        <br>
+                        <div>
+                            <li><b>Sources</b></li>
+                            <li> <a href="https://jdan.github.io/98.css/#button" target="_blank"
+                                    style="color: blue;">98.css</a>| A design system
+                                for building faithful recreations of old UIs.</li>
+                            <li> <a href="https://modelviewer.dev/" target="_blank"
+                                    style="color: blue;">modelviewer</a>| Easily display
+                                interactive 3D models on the web & in AR.</li>
+                        </div>
+
+                    </ul>
+
+                </div>
             </div>
-          </div>
-          
-        <!--
+
+            <div class="window" id="ventan_terminal">
+                <div class="title-bar">
+                    <div class="title-bar-text">Command Prompt</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close" id="Close3"></button>
+                    </div>
+                </div>
+                <div class="window-body" style="width: 500px;">
+                    <pre id="ventan_terminal2">
+                   <span>
+                    <br>Microsoft&#10094;R&#10095; Windows DOS
+                    <br>&#10094;C&#10095; Copyright Microsoft Corp 1990-2001.
+                    <br>C:&#92;WINDOWS&#92;SYSTEM32&#92;vzL98> 
+                   </span>
+                   
+                </pre>
+                </div>
+            </div>
+
+            <!--
          
         
           <div class="menu">
@@ -291,8 +394,10 @@
             </ul>
         </div>
     -->
-        
-        <script type="text/javascript" src="js/script.js"></script>
+
+            <script type="text/javascript" src="js/script.js"></script>
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        </div>
     </div>
 </body>
 

@@ -27,9 +27,23 @@ function displayClock() {
     document.getElementById('reloj').innerHTML = hrs + ':' + min + ' ' + en;
 
 }
+//random nicknames
+var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'popscar', 'secunene','44hz'];
+function nicknames() {
+  var i= document.getElementById('nicknames').value = nicks[Math.floor(Math.random() * nicks.length)]       
+}
+//alert div
+
+
+
 //esconder todas las ventanas
+document.getElementById("ventan_alert").style.display = "none";
 document.getElementById("ventan_credits").style.display = "none";
 document.getElementById("ventan_terminal").style.display = "none";
+document.getElementById("ventan_about").style.display = "none";
+document.getElementById("ventan_3d").style.display = "none";
+document.getElementById("ventan_sys").style.display = "none";
+document.getElementById("ventan_document").style.display = "none";
 //script para mover divs dentro del body
 ventan_alert.onmousedown = function (e) {
     var ventan_alert = document.getElementById("ventan_alert");
@@ -115,6 +129,69 @@ ventan_about.onmouseup = function () {
     document.onmousemove = null;
 };
 //---------------------------------
+ventan_3d.onmousedown = function (e) {
+    var ventan_3d = document.getElementById("ventan_3d");
+
+    var left = parseInt( window.getComputedStyle(ventan_3d).getPropertyValue("left") );
+    var top = parseInt( window.getComputedStyle(ventan_3d).getPropertyValue("top") );
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    document.onmousemove = function (e) {
+        var dx = mouseX - e.clientX;
+        var dy = mouseY - e.clientY;
+
+        ventan_3d.style.left = left - dx + "px";
+        ventan_3d.style.top = top - dy + "px";
+    };
+};
+
+ventan_3d.onmouseup = function () {
+    document.onmousemove = null;
+};
+//---------------------------------
+ventan_sys.onmousedown = function (e) {
+    var ventan_sys = document.getElementById("ventan_sys");
+
+    var left = parseInt( window.getComputedStyle(ventan_sys).getPropertyValue("left") );
+    var top = parseInt( window.getComputedStyle(ventan_sys).getPropertyValue("top") );
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    document.onmousemove = function (e) {
+        var dx = mouseX - e.clientX;
+        var dy = mouseY - e.clientY;
+
+        ventan_sys.style.left = left - dx + "px";
+        ventan_sys.style.top = top - dy + "px";
+    };
+};
+
+ventan_sys.onmouseup = function () {
+    document.onmousemove = null;
+};
+//---------------------------------
+ventan_document.onmousedown = function (e) {
+    var ventan_document = document.getElementById("ventan_document");
+
+    var left = parseInt( window.getComputedStyle(ventan_document).getPropertyValue("left") );
+    var top = parseInt( window.getComputedStyle(ventan_document).getPropertyValue("top") );
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    document.onmousemove = function (e) {
+        var dx = mouseX - e.clientX;
+        var dy = mouseY - e.clientY;
+
+        ventan_document.style.left = left - dx + "px";
+        ventan_document.style.top = top - dy + "px";
+    };
+};
+
+ventan_document.onmouseup = function () {
+    document.onmousemove = null;
+};
+//---------------------------------
 //abrir y cerrar divs
 //cerrar
 //div 1_alerta
@@ -162,6 +239,39 @@ btnCerrar4.onclick = function(){
         cerrarDiv4.style.display = "block";
     }
 }
+//div5_3d
+const cerrarDiv5 = document.getElementById('ventan_3d');
+const btnCerrar5 = document.getElementById('Close5');
+
+btnCerrar5.onclick = function(){
+    if(cerrarDiv5.style.display !== "none"){
+        cerrarDiv5.style.display ="none";
+    }else {
+        cerrarDiv5.style.display = "block";
+    }
+}
+//div6_sys
+const cerrarDiv6 = document.getElementById('ventan_sys');
+const btnCerrar6 = document.getElementById('Close6');
+
+btnCerrar6.onclick = function(){
+    if(cerrarDiv6.style.display !== "none"){
+        cerrarDiv6.style.display ="none";
+    }else {
+        cerrarDiv6.style.display = "block";
+    }
+}
+//div7_documents
+const cerrarDiv7 = document.getElementById('ventan_document');
+const btnCerrar7 = document.getElementById('Close7');
+
+btnCerrar7.onclick = function(){
+    if(cerrarDiv7.style.display !== "none"){
+        cerrarDiv7.style.display ="none";
+    }else {
+        cerrarDiv7.style.display = "block";
+    }
+}
 //abrir
 //div2
 const abrirDiv2 = document.getElementById('ventan_credits');
@@ -185,7 +295,6 @@ function Abrir3(){
     }
 }
 
-
 //div4_about
 const abrirDiv4 = document.getElementById('ventan_about');
 
@@ -194,5 +303,35 @@ function Abrir4(){
         abrirDiv4.style.display ="";
     }else {
         abrirDiv4.style.display = "";
+    }
+}
+//div5_3d
+const abrirDiv5 = document.getElementById('ventan_3d');
+
+function Abrir5(){
+    if(abrirDiv5.style.display !== ""){
+        abrirDiv5.style.display ="";
+    }else {
+        abrirDiv5.style.display = "";
+    }
+}
+//div6_sys
+const abrirDiv6 = document.getElementById('ventan_sys');
+
+function Abrir6(){
+    if(abrirDiv6.style.display !== ""){
+        abrirDiv6.style.display ="";
+    }else {
+        abrirDiv6.style.display = "";
+    }
+}
+//div7_document
+const abrirDiv7 = document.getElementById('ventan_document');
+
+function Abrir7(){
+    if(abrirDiv7.style.display !== ""){
+        abrirDiv7.style.display ="";
+    }else {
+        abrirDiv7.style.display = "";
     }
 }
