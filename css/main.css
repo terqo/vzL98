@@ -1,175 +1,238 @@
-html, body{
+html,
+body {
     background-color: #008282;
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	overflow: hidden;  
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
 }
 
 /*bloquear seleccion de texto en navegadores*/
 .disable-select {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
-    user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by any browser but < IE9 */
 }
 
-.window{
+.window {
     position: absolute;
-    
+
 }
-#ventan_alert{
+
+#ventan_alert {
     left: 100px;
     top: 100px;
 }
-#ventan_credits{
+
+#ventan_credits {
     left: 100px;
     top: 500px;
 }
-#ventan_about{
+
+#ventan_about {
     left: 100px;
     top: 500px;
 }
-#ventan_terminal{
+
+#ventan_terminal {
     left: 200px;
     top: 500px;
 }
-#ventan_terminal2{
+
+#ventan_terminal2 {
     background: black;
     color: white;
 }
-#ventan_3d{
+
+#ventan_3d {
     left: 50px;
-    top: 50px; 
+    top: 50px;
 }
-#ventan_sys{
+
+#ventan_sys {
     left: 25px;
-    top: 320px; 
+    top: 320px;
 }
-.ventan_3d{
+
+#app {
+    left: 250px;
+    top: 500px;
+}
+
+.ventan_3d {
     margin: 0px;
-    padding: 0px 30px 0 0 ;
+    padding: 0px 30px 0 0;
     width: 320px;
     height: 250px;
     overflow-x: hidden;
     overflow-y: auto;
 }
-textarea.console{
-        float: right;
-        background: none;
-        border: black;
-        color: white;
-        padding: 0;
-        margin: 0;
+
+textarea.console {
+    float: right;
+    background: none;
+    border: black;
+    color: white;
+    padding: 0;
+    margin: 0;
 }
 
 #overlay {
-    display:none;    
-    position:fixed;  
-    left:0px;        
-    top:0px;         
-    width:100%;      
-    height:100%;     
-    background:#000; 
-    opacity:0.5;     
-    z-index:99999;   
- }
- a:link {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 99999;
+}
+
+a:link {
     color: blue;
     background-color: transparent;
     text-decoration: none;
-  }
-  a:visited {
+}
+
+a:visited {
     color: blue;
     background-color: transparent;
     text-decoration: none;
-  }
- #popup {
-    display:none;
-    position:fixed;
-    left:50%;            
-    top:50%;             
-    width:300px;         
-    height:150px;
-    margin-top:-75px;   
-    margin-left:-150px;   
-    background:#FFFFFF;  
-    border:2px solid #000;  
-    z-index:100000;       
- }
-.barra{
-        display: flex; /* establish flex container */
-        flex-direction: row; /* default value; can be omitted */
-        flex-wrap: nowrap;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #C3C3C3;
-        width: 100%;
-        height: 30px;
-        margin: 0;
-      }
-.barra-division{
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -150px;
+    background: #FFFFFF;
+    border: 2px solid #000;
+    z-index: 100000;
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+}
+
+.barra {
+    display: flex;/* establish flex container */
+    flex-direction: row;/* default value; can be omitted */
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #C3C3C3;
+    height: 30px;
+    margin: 0;
+}
+
+.barra-division {
     margin-right: 0px;
-	margin-left: 0px;
+    margin-left: 0px;
     margin: 2px;
 }
-.barra-exe{
+
+.barra-exe {
     display: flex;
-	flex: 1;
-	height: 100%;
-	min-width: 0; /* reset implicit min-width from flexbox */
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+    /* reset implicit min-width from flexbox */
 }
-.bandeja{
+
+.bandeja {
     display: flex;
-	flex-direction: row;
-	/* align-items: center; */
-	/* align-content: center; */
-	/* justify-content: center; */
-	line-height: 22px;
-	box-sizing: border-box;
-	vertical-align: middle;
+    flex-direction: row;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    line-height: 22px;
+    box-sizing: border-box;
+    vertical-align: middle;
 }
-.inicioBtn{
+
+.inicioBtn {
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
 }
-.barra-reloj{
+
+.exeBtn {
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.barra-reloj {
     margin: 5px;
     height: 20px;
     width: 80px;
-	text-align: center;
+    text-align: center;
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
-    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
-.icons{
+.icons {
     height: 30px;
     width: auto;
     cursor: pointer;
-  }  
+}
+
 .exe {
     color: white;
     height: 60px;
     width: 85px;
     margin: 0;
     text-align: center;
-  }
-  .exe p {
+}
+
+.exe p {
     margin: 0;
-  }
-  .exe2 {
+}
+
+.exe2 {
     color: white;
     height: 60px;
     width: 240px;
     margin: 3;
     text-align: center;
-  }
+}
 
+
+@media screen and (max-width: 480px) {
+
+    .machine {
+        width: 200%;
+        max-width: 1092px;
+    }
+
+    .window {
+        left: 50px;
+        top: 50px;
+        width: 400px;
+    }
+}

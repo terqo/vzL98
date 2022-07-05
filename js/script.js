@@ -44,6 +44,32 @@ document.getElementById("ventan_about").style.display = "none";
 document.getElementById("ventan_3d").style.display = "none";
 document.getElementById("ventan_sys").style.display = "none";
 document.getElementById("ventan_document").style.display = "none";
+document.getElementById("menu").style.display = "none";
+
+//inicio home menu 
+const abrirMenu = document.getElementById('menu');
+
+function AbrirMenu(){
+    if(abrirMenu.style.display !== ""){
+        abrirMenu.style.display ="";
+        abrirMenu.classList.toggle('active');
+    }else {
+        abrirMenu.style.display = "";
+    }
+}
+
+//---------------------------------------------------
+const cerrarMenu = document.getElementById('menu');
+const btnMenu = document.getElementById('menuBtn');
+
+btnMenu.onclick = function(){
+    if(cerrarMenu.style.display !== "none"){
+        cerrarMenu.style.display ="none";
+    }else {
+        cerrarMenu.style.display = "block";
+    }
+}
+
 //script para mover divs dentro del body
 ventan_alert.onmousedown = function (e) {
     var ventan_alert = document.getElementById("ventan_alert");
@@ -272,6 +298,7 @@ btnCerrar7.onclick = function(){
         cerrarDiv7.style.display = "block";
     }
 }
+
 //abrir
 //div2
 const abrirDiv2 = document.getElementById('ventan_credits');
