@@ -10,6 +10,7 @@ body {
     padding: 0;
     border: 0;
     overflow: hidden;
+    position: absolute;
 }
 
 /*bloquear seleccion de texto en navegadores*/
@@ -28,34 +29,31 @@ body {
     /* Non-prefixed version, currently supported by any browser but < IE9 */
 }
 
-.window {
-    position: absolute;
 
+.window {
+    position: fixed;
 }
 
+
 #ventan_alert {
-    left: 100px;
-    top: 100px;
+    color: red;
+    font-size: large;
+    left: 0;
+    top: 150px;
+    z-index: 1;
+}
+.ventan_alert{
+    padding: 30px;
 }
 
 #ventan_credits {
     left: 100px;
-    top: 500px;
+    top: 100px;
 }
 
 #ventan_about {
-    left: 100px;
-    top: 500px;
-}
-
-#ventan_terminal {
-    left: 200px;
-    top: 500px;
-}
-
-#ventan_terminal2 {
-    background: black;
-    color: white;
+    left: 50px;
+    top: 250px;
 }
 
 #ventan_3d {
@@ -72,10 +70,18 @@ body {
     left: 250px;
     top: 500px;
 }
-
+.ventan_about{
+    margin: 0px;
+    padding: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.about_container{
+    padding: 30px;
+}
 .ventan_3d {
     margin: 0px;
-    padding: 0px 30px 0 0;
+    padding: 40px;
     width: 320px;
     height: 250px;
     overflow-x: hidden;
@@ -115,6 +121,30 @@ a:visited {
     text-decoration: none;
 }
 
+.paginas:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginas:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginasEscritorio:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginasEscritorio:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 #popup {
     display: none;
     position: fixed;
@@ -129,17 +159,15 @@ a:visited {
     z-index: 100000;
 }
 
-.menu {
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-
+#menu{
+        bottom: 0;
+        right: 0;
 }
-
 .barra {
-    display: flex;/* establish flex container */
-    flex-direction: row;/* default value; can be omitted */
+    display: flex;
+    /* establish flex container */
+    flex-direction: row;
+    /* default value; can be omitted */
     flex-wrap: nowrap;
     position: fixed;
     left: 0;
@@ -176,9 +204,11 @@ a:visited {
 }
 
 .inicioBtn {
+    /*pointer-events: none;*/
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
+    
 }
 
 .exeBtn {
@@ -222,17 +252,67 @@ a:visited {
     text-align: center;
 }
 
+.box{
+    width: 80px;
+    height: 80px;
+    background-image: url(/images/morty2.gif);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 0 auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.90);
+}
+.box2{
+    width: 120px;
+    height: 80px;
+    margin: 0 0 0 80px;
+    padding: 5px;
+    text-align: right;
+   
+}
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1092px) {
 
-    .machine {
-        width: 200%;
-        max-width: 1092px;
+   
+    .window {
+        left: 0;
+        margin: 0 10px auto;
     }
 
+    .menu {
+        left: 0;
+        top: 290px;
+        width: auto;
+        margin: 0 0 auto 0;
+    }
+}
+@media (min-width: 500px) and (max-width: 900px) {
+ 
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+
+   
     .window {
-        left: 50px;
-        top: 50px;
-        width: 400px;
+        left: 0;
+        right: 0;
+        width: auto;
+        margin: 0 10px auto;
+    }
+
+    .menu {
+        
+        left: 0;
+        bottom: 20px;
+        top: 0px;
+        width: auto;
+        margin: 0 0 auto 0;
+    }
+}
+@media (max-width:350px) {
+    .inicioBtn {
+        pointer-events: none;
     }
 }
