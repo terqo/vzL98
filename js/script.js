@@ -45,6 +45,7 @@ document.getElementById("menu").style.display = "none";
 
 
 //centrar divs
+/*
 function centrar(){
     var elem = document.getElementById('ventan_credits'),
         elemWidth = elem.offsetWidth,
@@ -60,7 +61,7 @@ function centrar(){
 }
 document.addEventListener("DOMContentLoaded", centrar, false);
 window.addEventListener("scroll", centrar, false);
-
+*/
 //inicio boton home menu Windows
 const abrirMenu = document.getElementById('menu');
 

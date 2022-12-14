@@ -18,7 +18,8 @@
     <link rel="icon" href="images/VSChromeLogo0001-0180.gif">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/win98.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
 
 
@@ -27,8 +28,8 @@
 <body>
 
     <div class="disable-select">
+        
         <div class="win98">
-
 
             <div class="exe">
                 <img class="icons" onclick="Abrir6()"
@@ -80,7 +81,7 @@
             </div>
 
             <div class="barra">
-                <button class="inicioBtn disable-dbl-tap-zoom" disabled="true" id="menuBtn" onclick="">
+                <button class="inicioBtn disable-dbl-tap-zoom" disabled="true" id="menuBtn" onclick="AbrirMenu()">
                     <img
                         src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
                     Start
@@ -359,11 +360,12 @@
                             <img src="https://img.shields.io/badge/-NodeJs-yellowgreen" alt="">
                             <img src="https://img.shields.io/badge/-Flutter-brightgreen" alt="">
                         </center>
-                        <p>Socials</p>
+                        <p>Contact me</p>
                         <center>
                             <li><a href="https://twitter.com/terqoo" target="_blank">@terqoo</a></li>
                             <li><a href="https://linkedin.com/in/oscqr" target="_blank">@oscqr</a></li>
                             <li><a href="https://github.com/140hz" target="_blank">@140hz</a></li>
+                            
                         </center>
                     </div>
                 </div>
@@ -383,7 +385,7 @@
                         <button aria-label="Close" id="Close5"></button>
                     </div>
                 </div>
-                <div class="ventan_3d">
+                <div class="window-body ventan_3d">
                     <model-viewer bounds="tight" src="3dFiles/statue.glb" ar
                         ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
                         poster="poster.webp" shadow-intensity="1.6" exposure="2">
@@ -461,6 +463,7 @@
                     <p class="status-bar-field">CPU Usage: 54%</p>
                 </div>
             </div>
+            
 
             <div class="window" id="ventan_alert" >
                 <div class="title-bar">
@@ -535,6 +538,7 @@
                 webamp.renderWhenReady(app);
             </script>
         </div>
+    </div>
 </body>
 
 </html>
