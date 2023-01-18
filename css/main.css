@@ -28,11 +28,14 @@ body {
     position:absolute;
     justify-content: center;
     align-items: center;
-    top: 50%;
+    top: 30%;
     left: 0%;
 }
 
-
+.spotify{
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
 
 #ventan_alert {
     color: red;
@@ -48,7 +51,8 @@ body {
     margin: 0px;
     padding: 30px;
     overflow-x: hidden;
-    overflow-y: hid;
+    overflow-y: auto;
+
 }
 .about_container{
     padding: 30px;

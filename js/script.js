@@ -87,4 +87,17 @@ btnMenu.onclick = function(){
 }
 
 //---------------------------------------------------------------
+//spotify
 
+fetch(
+    "https://api.github.com/repos/140hz/spotify-widget/contents/player.min.html"
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var iframe = document.getElementById("github-iframe");
+      iframe.src =
+        "data:text/html;charset=utf-8;base64," +
+        encodeURIComponent(data["content"]);
+});
