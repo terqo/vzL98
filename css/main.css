@@ -28,7 +28,7 @@ body {
     position:absolute;
     justify-content: center;
     align-items: center;
-    top: 30%;
+    top: 20%;
     left: 0%;
 }
 
@@ -53,7 +53,7 @@ body {
 
 .ventan_about{
     margin: 0px;
-    padding: 30px;
+    padding: 15px;
     overflow-x: hidden;
     overflow-y: auto;
     width: 500px;
@@ -210,9 +210,10 @@ a:visited {
     height: 80px;
     background-image: url(/images/morty1.gif);
     background-size: cover;
-    border-radius: 10%;
+    border-radius: 15%;
     margin: 0 0 auto;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.90);
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
     
 }
 .box2{
