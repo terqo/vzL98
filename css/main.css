@@ -33,8 +33,12 @@ body {
 }
 
 .spotify{
-    padding-top: 10px;
-    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 2px white solid;
+    border-bottom: 2px rgb(34, 33, 33) solid;
+    border-right:2px rgb(34, 33, 33)  solid;
 }
 
 #ventan_alert {
@@ -52,6 +56,8 @@ body {
     padding: 30px;
     overflow-x: hidden;
     overflow-y: auto;
+    width: 500px;
+    height: auto;
 
 }
 .about_container{
@@ -193,24 +199,41 @@ a:visited {
     margin: 3;
     text-align: center;
 }
-
+.boxContainer{
+    display:flex;
+    height: 80px;
+    
+}
 .box{
+    position: absolute;
     width: 80px;
     height: 80px;
     background-image: url(/images/morty1.gif);
     background-size: cover;
-    border-radius: 50%;
+    border-radius: 10%;
     margin: 0 0 auto;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.90);
+    
 }
 .box2{
-    width: 120px;
-    height: 80px;
-    margin: 0 0 0 80px;
-    padding: 5px;
-    text-align: right;
-   
+    margin-left: 90px;
+    padding: 0 5px;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
+.box3{
+    padding: 7px 5px;
+    margin-left: 5px;
+    max-width: auto;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+.box4{
+    padding: 15px;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
 .disable-dbl-tap-zoom {
     touch-action: manipulation;
 }
