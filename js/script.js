@@ -28,7 +28,7 @@ function displayClock() {
 
 }
 //random nicknames
-var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'popscar', 'secunene','44hz','fvckoscqr', 'oscarDGAF', 'estarqui','terqoo','140hz'];
+var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'popscar', 'secunene','44hz','fvckoscqr', 'oscarDGAF', 'estarqui','terqoo','140hz','oscar'];
 function nicknames() {
  document.getElementById('nicknames').value = nicks[Math.floor(Math.random() * nicks.length)]       
 }

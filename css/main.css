@@ -26,10 +26,9 @@ body {
 
 .window {
     position:absolute;
-    justify-content: center;
-    align-items: center;
-    top: 20%;
+    top: 0%;
     left: 0%;
+    transform: translate(0%, 0%);
 }
 
 .spotify{
@@ -42,15 +41,20 @@ body {
 }
 
 #ventan_alert {
-    color: red;
+    color: black;
     font-size: large;
     z-index: 1;
     width: auto ;
-}
-.ventan_alert{
-    padding: 30px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+#ventan_credits{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .ventan_about{
     margin: 0px;
     padding: 15px;
@@ -71,6 +75,16 @@ body {
     height: 250px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+#ventan_3d{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#ventan_sys{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -199,10 +213,28 @@ a:visited {
     margin: 3;
     text-align: center;
 }
+.errorContainer{
+    display:flex;
+    height: 80px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+.error{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url(/images/Error.ico);
+    background-size: cover;
+}
+.error2{
+    margin-left: 90px;
+
+    padding: 0 5px;
+}
 .boxContainer{
     display:flex;
     height: 80px;
-    
+
 }
 .box{
     position: absolute;
