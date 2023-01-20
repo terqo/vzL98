@@ -42,26 +42,6 @@ document.getElementById("ventan_sys").style.display = "none";
 document.getElementById("ventan_document").style.display = "none";
 document.getElementById("menu").style.display = "none";
 
-
-
-//centrar divs
-/*
-function centrar(){
-    var elem = document.getElementById('ventan_credits'),
-        elemWidth = elem.offsetWidth,
-        elemHeight = elem.offsetHeight,
-        winWidth =window.innerWidth,
-        winHeight = window.innerHeight,
-        winX = window.scrollX, //Cantidad desplazada horizontalmente (scroll)
-        winY = window.scrollY;
-
-
-        elem.style.marginTop = (winHeight / 2 - elemHeight / 2) + winY + "px"; //Centrado vertical
-        elem.style.marginLeft = (winWidth / 2 - elemWidth / 2) + winX + "px"; 
-}
-document.addEventListener("DOMContentLoaded", centrar, false);
-window.addEventListener("scroll", centrar, false);
-*/
 //inicio boton home menu Windows
 const abrirMenu = document.getElementById('menu');
 

@@ -10,7 +10,6 @@ function Abrir2(){
     }
 }
 
-
 //div4_about
 const abrirDiv4 = document.getElementById('ventan_about');
 
