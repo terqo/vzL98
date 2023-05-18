@@ -1,0 +1,293 @@
+html,
+body {
+    background-color: #008282;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+/*bloquear seleccion de texto en navegadores*/
+.disable-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by any browser but < IE9 */
+
+}
+
+.window {
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+}
+
+.spotify{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 2px white solid;
+    border-bottom: 2px rgb(34, 33, 33) solid;
+    border-right:2px rgb(34, 33, 33)  solid;
+}
+
+#ventan_alert {
+    color: black;
+    font-size: large;
+    z-index: 1;
+    width: auto ;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ventan_credits{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ventan_about{
+    margin: 0px;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 500px;
+    height: auto;
+
+}
+.about_container{
+    padding: 30px;
+}
+.ventan_3d {
+    padding: 25px;
+    width: auto;
+    min-width: 100px;
+    max-width: 320px;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#ventan_3d{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#ventan_sys{
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu{
+    top: 50%;
+    left: 0%;
+
+}
+
+
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginas:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginas:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginasEscritorio:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.paginasEscritorio:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.barra {
+    display: flex;
+    /* establish flex container */
+    flex-direction: row;
+    /* default value; can be omitted */
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #C3C3C3;
+    height: 30px;
+    margin: 0;
+}
+
+.barra-division {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin: 2px;
+}
+
+.barra-exe {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+    /* reset implicit min-width from flexbox */
+}
+
+.bandeja {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    line-height: 22px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.inicioBtn {
+    /*pointer-events: none;*/
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.exeBtn {
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.barra-reloj {
+    margin: 5px;
+    height: 20px;
+    width: 80px;
+    text-align: center;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+.icons {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+}
+
+.exe {
+    color: white;
+    height: 60px;
+    width: 85px;
+    margin: 0;
+    text-align: center;
+}
+
+.exe p {
+    margin: 0;
+}
+
+.exe2 {
+    color: white;
+    height: 60px;
+    width: 240px;
+    margin: 3;
+    text-align: center;
+}
+.errorContainer{
+    display:flex;
+    height: 80px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+.error{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url(/images/Error.ico);
+    background-size: cover;
+}
+.error2{
+    margin-left: 90px;
+
+    padding: 0 5px;
+}
+.boxContainer{
+    display:flex;
+    height: 80px;
+
+}
+.box{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url(/images/morty1.gif);
+    background-size: cover;
+    border-radius: 15%;
+    margin: 0 0 auto;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+    
+}
+.box2{
+    margin-left: 90px;
+    padding: 0 5px;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+.box3{
+    padding: 7px 5px;
+    margin-left: 5px;
+    max-width: auto;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+.box4{
+    padding: 15px;
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+}
+
+
+/* Desktops, large screens */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+
+}
+/* Small screens, laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+/* iPads, Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+/* mobile devices */
+@media only screen and(min-width: 320px) and (max-width: 480px) {
+
+}
