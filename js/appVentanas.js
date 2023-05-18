@@ -177,26 +177,26 @@
         document.onmousemove = null;
     };
     //---------------------------------
-    tresd.onmousedown = function (e) {
+        // tresd.onmousedown = function (e) {
 
-        var left = parseInt( window.getComputedStyle(tresd).getPropertyValue("left") );
-        var top = parseInt( window.getComputedStyle(tresd).getPropertyValue("top") );
-        var mouseX = e.clientX;
-        var mouseY = e.clientY;
+        //     var left = parseInt( window.getComputedStyle(tresd).getPropertyValue("left") );
+        //     var top = parseInt( window.getComputedStyle(tresd).getPropertyValue("top") );
+        //     var mouseX = e.clientX;
+        //     var mouseY = e.clientY;
 
-        document.onmousemove = function (e) {
-            var dx = mouseX - e.clientX;
-            var dy = mouseY - e.clientY;
+        //     document.onmousemove = function (e) {
+        //         var dx = mouseX - e.clientX;
+        //         var dy = mouseY - e.clientY;
 
-            tresd.style.left = left - dx + "px";
-            tresd.style.top = top - dy + "px";
-            tresd.style.zIndex = i++;
-        };
-    };
+        //         tresd.style.left = left - dx + "px";
+        //         tresd.style.top = top - dy + "px";
+        //         tresd.style.zIndex = i++;
+        //     };
+        // };
 
-    tresd.onmouseup = function () {
-        document.onmousemove = null;
-    };
+        // tresd.onmouseup = function () {
+        //     document.onmousemove = null;
+        // };
     //---------------------------------
     sys.onmousedown = function (e) {
         
