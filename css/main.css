@@ -5,6 +5,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     position:relative;
+    cursor: url('/cursor/windows95.cur'), auto;
 }
 
 /*bloquear seleccion de texto en navegadores*/
@@ -92,7 +93,9 @@ body {
 
 }
 
-
+button{
+    cursor: pointer;
+}
 a:link {
     color: blue;
     background-color: transparent;
@@ -268,6 +271,18 @@ a:visited {
     padding: 15px;
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
         inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+.box5{
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.box5 img{
+    display: inline-block;
+
+    margin-right: 10px;
 }
 
 .disable-dbl-tap-zoom {
