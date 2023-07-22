@@ -72,14 +72,14 @@ body {
     overflow-y: auto;
 }
 .menu{
-    position: fixed;
-    left: 0;
-    bottom: 4%;
+    position: absolute;
+    left: 0%;
+    bottom: 3.5%;
     
 }
 @media (min-width: 390px) {
     .menu{
-        bottom: 3.5%;
+        bottom: 3.7%;
     }
 }
 @media (min-width: 768px) {
@@ -94,7 +94,7 @@ body {
 }
 @media (min-width: 1440px) {
     .menu{
-        bottom: 3.5%;
+        bottom:4%;
     }
 }
 
