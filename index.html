@@ -30,11 +30,11 @@ vzL 98
 
 </head>
 
-<body>
+<body onclick="bodyOnClick()">
 
     <div class="disable-select">
 
-        <div class="win98">
+        <div class="win98" >
 
             <div class="exe">
                 <a onclick="System()">
@@ -73,7 +73,6 @@ vzL 98
                     3D Art (?)
                 </p>
             </div>
-
             <div class="exe" ">
                 <a onclick=" Creditos()">
                 <img loading="lazy" class="icons"
@@ -83,7 +82,6 @@ vzL 98
                     credits.txt
                 </p>
             </div>
-            <br><br>
 
             <div class="barra">
                 <button class="inicioBtn disable-dbl-tap-zoom" id="menuBtn" onclick="AbrirMenu()">
@@ -97,6 +95,31 @@ vzL 98
                         DESPUES, AQUI VAN LAS APLICACIONES O ARCHIVOS EXE 
                         DE LA BARRA
                  -->
+                 <button class="windowBtn disable-dbl-tap-zoom" id="creditsBtn" onclick="bringToFront(this)">
+                    <img loading="lazy" class="imgBtn"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    credits
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="3dBtn" onclick="bringToFront(this)">
+                    <img loading="lazy" class="imgBtn"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    3d art
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="aboutBtn" onclick="bringToFront(this)">
+                    <img loading="lazy" class="imgBtn"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    about
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="systemBtn" onclick="bringToFront(this)">
+                    <img loading="lazy" class="imgBtn"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    system
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="projectsBtn" onclick="bringToFront(this)">
+                    <img loading="lazy" class="imgBtn"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    projects
+                </button>
 
                 </div>
                 <div class="barra-division"></div>
@@ -249,7 +272,7 @@ vzL 98
                         <button aria-label="Close" id="Close6"></button>
                     </div>
                 </div>
-                <div class="window-body">
+                <div class="window-body" >
                     <ul class="tree-view" style="display: flex; align-items: center;padding: 15px; height: 100px;">
 
                         <div class="exe">

@@ -161,7 +161,39 @@ a:visited {
     font-weight: bold;
     margin: 5px;
     margin-left: 8px;
+    margin-right: 1px;
     cursor: pointer;
+}
+.windowBtn{
+    font-weight: normal ;
+    margin: 5px 2px;
+    cursor: pointer;
+}
+@media (min-width: 375px) {
+    .windowBtn{
+        width: 20px;
+        padding: 0;
+        margin: 5px 1px;
+    }
+    .imgBtn{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .windowBtn{
+        width: 100px;
+    }
+    .imgBtn{
+        display: inline;
+    }
+}
+@media (min-width: 1040px) {
+    .windowBtn{
+        width: 150px;
+    }
+}
+.active{
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
 .exeBtn {

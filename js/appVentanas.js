@@ -1,25 +1,47 @@
+    //divs
     const about = document.getElementById('ventan_about');
     const tresd = document.getElementById('ventan_3d');
     const sys = document.getElementById('ventan_sys');
     const documento = document.getElementById('ventan_document');
     const alerta = document.getElementById('ventan_alert');
     const credits = document.getElementById('ventan_credits');
+    //botones cerrar divs 
+    const btnCerrar = document.getElementById('Close1');
+    const btnCerrar2 = document.getElementById('Close2');
+    const btnCerrar4 = document.getElementById('Close4');
+    const btnCerrar5 = document.getElementById('Close5');
+    const btnCerrar6 = document.getElementById('Close6');
+    const btnCerrar7 = document.getElementById('Close7');
+    //botones ventanas
+    const creditsBtn = document.getElementById('creditsBtn');
+    const Btn3d = document.getElementById('3dBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const systemBtn = document.getElementById('systemBtn');
+    const projectsBtn = document.getElementById('projectsBtn');
 
 
     function Creditos(){
         credits.style.display = credits.style.display === "none" ? "" : "none";
+        creditsBtn.style.display = creditsBtn.style.display === "none" ? "" : "none";
+        creditsBtn.classList.add('active'); 
     }
     //div4_about
     function About(){
         about.style.display = about.style.display === "none" ? "" : "none";
+        aboutBtn.style.display = aboutBtn.style.display === "none" ? "" : "none";
+        aboutBtn.classList.add('active'); 
     }
     //div5_3d
     function TRESD(){
         tresd.style.display = tresd.style.display === "none" ? "" : "none";
+        Btn3d.style.display = Btn3d.style.display === "none" ? "" : "none";
+        Btn3d.classList.add('active'); 
     }
     //div6_sys
     function System(){
         sys.style.display = sys.style.display === "none" ? "" : "none";
+        systemBtn.style.display = systemBtn.style.display === "none" ? "" : "none";
+        systemBtn.classList.add('active'); 
     }
     //div7_document
     function Docs(){
@@ -29,32 +51,30 @@
     
     //cerrar
     //div 1_alerta
-    const btnCerrar = document.getElementById('Close1');
     btnCerrar.onclick = function(){
         alerta.style.display = alerta.style.display === "none" ? "block" : "none";
     }
     //div2_credits
-    const btnCerrar2 = document.getElementById('Close2');
     btnCerrar2.onclick = function(){
         credits.style.display = credits.style.display === "none" ? "block" : "none";
+        creditsBtn.style.display = creditsBtn.style.display === "none" ? "" : "none";
     }
     //div4_about
-    const btnCerrar4 = document.getElementById('Close4');
     btnCerrar4.onclick = function(){
         about.style.display = about.style.display === "none" ? "block" : "none";
+        aboutBtn.style.display = aboutBtn.style.display === "none" ? "" : "none";
     }
     //div5_3d
-    const btnCerrar5 = document.getElementById('Close5');
     btnCerrar5.onclick = function(){
         tresd.style.display = tresd.style.display === "none" ? "block" : "none";
+        Btn3d.style.display = Btn3d.style.display === "none" ? "" : "none";
     }
     //div6_sys
-    const btnCerrar6 = document.getElementById('Close6');
     btnCerrar6.onclick = function(){
         sys.style.display = sys.style.display === "none" ? "block" : "none";
+        systemBtn.style.display = systemBtn.style.display === "none" ? "" : "none";
     }
     //div7_documents
-    const btnCerrar7 = document.getElementById('Close7');
     btnCerrar7.onclick = function(){
         documento.style.display = documento.style.display === "none" ? "block" : "none";
     }
@@ -83,10 +103,6 @@
         document.onmousemove = null;
     };
 
-    function bringToFront() {
-        alerta.style.zIndex = "1";
-    }
-
     //---------------------------------
     credits.onmousedown = function (e) {
 
@@ -103,6 +119,7 @@
             credits.style.top = top - dy + "px";
             credits.style.zIndex = i++;
         };
+
     };
 
     credits.onmouseup = function () {
@@ -124,6 +141,7 @@
             about.style.left = left - dx + "px";
             about.style.top = top - dy + "px";
             about.style.zIndex = i++;
+            
         };
     };
 
@@ -188,10 +206,12 @@
             documento.style.top = top - dy + "px";
             documento.style.zIndex = i++;
         };
+        
     };
     documento.onmouseup = function () {
         document.onmousemove = null;
     };
     //---------------------------------
-
-    
+    function bringToFront() {
+        document.style.zIndex = i++;
+    }
