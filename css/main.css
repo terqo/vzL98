@@ -73,9 +73,29 @@ body {
 }
 .menu{
     position: fixed;
-    left: 0%;
+    left: 0;
     bottom: 4%;
-
+    
+}
+@media (min-width: 390px) {
+    .menu{
+        bottom: 3.5%;
+    }
+}
+@media (min-width: 768px) {
+    .menu{
+        bottom: 3%;
+    }
+}
+@media (min-width: 1140px) {
+    .menu{
+        bottom: 3.5%;
+    }
+}
+@media (min-width: 1440px) {
+    .menu{
+        bottom: 3.5%;
+    }
 }
 
 button{
