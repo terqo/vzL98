@@ -1,108 +1,62 @@
-    const credits = document.getElementById('ventan_credits');
     const about = document.getElementById('ventan_about');
     const tresd = document.getElementById('ventan_3d');
     const sys = document.getElementById('ventan_sys');
     const documento = document.getElementById('ventan_document');
     const alerta = document.getElementById('ventan_alert');
+    const credits = document.getElementById('ventan_credits');
 
 
     function Creditos(){
-        if(credits.style.display !== ""){
-            credits.style.display ="";
-        }else {
-            credits.style.display = "";
-        }
+        credits.style.display = credits.style.display === "none" ? "" : "none";
     }
-
     //div4_about
     function About(){
-        if(about.style.display !== ""){
-            about.style.display ="";
-        }else {
-            about.style.display = "";
-        }
+        about.style.display = about.style.display === "none" ? "" : "none";
     }
     //div5_3d
     function TRESD(){
-        if(tresd.style.display !== ""){
-            tresd.style.display ="";
-        }else {
-            tresd.style.display = "";
-        }
+        tresd.style.display = tresd.style.display === "none" ? "" : "none";
     }
     //div6_sys
     function System(){
-        if(sys.style.display !== ""){
-            sys.style.display ="";
-        }else {
-            sys.style.display = "";
-        }
+        sys.style.display = sys.style.display === "none" ? "" : "none";
     }
     //div7_document
     function Docs(){
-        if(documento.style.display !== ""){
-            documento.style.display ="";
-        }else {
-            documento.style.display = "";
-        }
+        documento.style.display = documento.style.display === "none" ? "" : "none";
     }
-
     //abrir y cerrar divs
+    
     //cerrar
-
     //div 1_alerta
     const btnCerrar = document.getElementById('Close1');
     btnCerrar.onclick = function(){
-        if(alerta.style.display !== "none"){
-            alerta.style.display ="none";
-        }else {
-            alerta.style.display = "block";
-        }
+        alerta.style.display = alerta.style.display === "none" ? "block" : "none";
     }
     //div2_credits
     const btnCerrar2 = document.getElementById('Close2');
     btnCerrar2.onclick = function(){
-        if(credits.style.display !== "none"){
-            credits.style.display ="none";
-        }else {
-            credits.style.display = "block";
-        }
+        credits.style.display = credits.style.display === "none" ? "block" : "none";
     }
     //div4_about
     const btnCerrar4 = document.getElementById('Close4');
     btnCerrar4.onclick = function(){
-        if(about.style.display !== "none"){
-            about.style.display ="none";
-        }else {
-            about.style.display = "block";
-        }
+        about.style.display = about.style.display === "none" ? "block" : "none";
     }
     //div5_3d
     const btnCerrar5 = document.getElementById('Close5');
     btnCerrar5.onclick = function(){
-        if(tresd.style.display !== "none"){
-            tresd.style.display ="none";
-        }else {
-            tresd.style.display = "block";
-        }
+        tresd.style.display = tresd.style.display === "none" ? "block" : "none";
     }
     //div6_sys
     const btnCerrar6 = document.getElementById('Close6');
     btnCerrar6.onclick = function(){
-        if(sys.style.display !== "none"){
-            sys.style.display ="none";
-        }else {
-            sys.style.display = "block";
-        }
+        sys.style.display = sys.style.display === "none" ? "block" : "none";
     }
     //div7_documents
     const btnCerrar7 = document.getElementById('Close7');
     btnCerrar7.onclick = function(){
-        if(documento.style.display !== "none"){
-            documento.style.display ="none";
-        }else {
-            documento.style.display = "block";
-        }
+        documento.style.display = documento.style.display === "none" ? "block" : "none";
     }
     //----------------------------------------------------------------
     //script para mover divs dentro del body
@@ -239,3 +193,5 @@
         document.onmousemove = null;
     };
     //---------------------------------
+
+    

@@ -28,7 +28,7 @@ function displayClock() {
 
 }
 //random nicknames
-var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'popscar', 'secunene','44hz','fvckoscqr', 'oscarDGAF', 'estarqui','terqoo','140hz','oscar'];
+var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'secunene','44hz', 'oscarDGAF', 'estarqui','terqoo','140hz','oscar'];
 function nicknames() {
  document.getElementById('nicknames').value = nicks[Math.floor(Math.random() * nicks.length)]       
 }
@@ -46,12 +46,8 @@ document.getElementById("menu").style.display = "none";
 const abrirMenu = document.getElementById('menu');
 
 function AbrirMenu(){
-    if(abrirMenu.style.display !== ""){
-        abrirMenu.style.display ="";
-        abrirMenu.classList.toggle('active');
-    }else {
-        abrirMenu.style.display = "";
-    }
+    abrirMenu.style.display = abrirMenu.style.display === "none" ? "" : "none";
+    abrirMenu.classList.toggle('active');
 }
 
 //---------------------------------------------------
@@ -59,11 +55,7 @@ const cerrarMenu = document.getElementById('menu');
 const btnMenu = document.getElementById('menuBtn');
 
 btnMenu.onclick = function(){
-    if(cerrarMenu.style.display !== "none"){
-        cerrarMenu.style.display ="none";
-    }else {
-        cerrarMenu.style.display = "block";
-    }
+    cerrarMenu.style.display = cerrarMenu.style.display === "none" ? "block" : "none";
 }
 
 //---------------------------------------------------------------

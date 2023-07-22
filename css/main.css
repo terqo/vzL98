@@ -72,9 +72,9 @@ body {
     overflow-y: auto;
 }
 .menu{
-    position: absolute;
+    position: fixed;
     left: 0%;
-    bottom: 5%;
+    bottom: 4%;
 
 }
 
