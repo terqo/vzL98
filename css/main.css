@@ -72,30 +72,8 @@ body {
     overflow-y: auto;
 }
 .menu{
-    position: absolute;
     left: 0%;
-    bottom: 3.5%;
-    
-}
-@media (min-width: 390px) {
-    .menu{
-        bottom: 3.7%;
-    }
-}
-@media (min-width: 768px) {
-    .menu{
-        bottom: 3%;
-    }
-}
-@media (min-width: 1140px) {
-    .menu{
-        bottom: 3.5%;
-    }
-}
-@media (min-width: 1440px) {
-    .menu{
-        bottom:4%;
-    }
+    bottom: 31px;
 }
 
 button{
@@ -138,6 +116,7 @@ a:visited {
 }
 
 .barra {
+    position: absolute;
     display: flex;
     /* establish flex container */
     flex-direction: row;
