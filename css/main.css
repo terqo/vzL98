@@ -23,6 +23,7 @@ body {
     /* Internet Explorer/Edge */
     user-select: none;
     /* Non-prefixed version, currently supported by any browser but < IE9 */
+    height: 100%;
 }
 
 .window {
@@ -41,7 +42,7 @@ body {
     border-right:2px rgb(34, 33, 33)  solid;
 }
 .centrar_ventana{
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -70,6 +71,20 @@ body {
     height: 250px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+.ventan_musik{
+    width: auto;
+    height: auto;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 10px;
+}
+.ventan_projects{
+    width: auto;
+    height: 300px;
+    padding: 60px;
+    min-width: 100px;
+    max-width: 550px;
 }
 .menu{
     left: 0%;

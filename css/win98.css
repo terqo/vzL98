@@ -1,7 +1,9 @@
 .block-centered {
   margin: 0 auto;
 }
-
+.win98{
+  height: 100%;
+}
 .win98 .content {
   padding: 7px 10px;
 }
