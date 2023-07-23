@@ -30,7 +30,7 @@ vzL 98
 
 </head>
 
-<body onclick="bodyOnClick()">
+<body>
 
     <div class="disable-select">
 
@@ -45,13 +45,24 @@ vzL 98
                     system (c:)
                 </p>
             </div>
-            <div class="exe" onclick="">
-                <a href="https://visualsucios.netlify.app/" target="_blank" class="paginasEscritorio">
+            <div class="exe">
+                <a onclick="musika()">
                     <img loading="lazy" class="icons"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmsie2-5.png?alt=media&token=dfe31ee7-e932-4ce9-8d32-8c37d92fdb0c" />
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmultimedia-4.png?alt=media&token=39087fe7-ed62-42df-9b3a-1defba869268" />
+                        <!-- src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmsie2-5.png?alt=media&token=dfe31ee7-e932-4ce9-8d32-8c37d92fdb0c" /> -->
                 </a>
                 <p>
-                    vzL v1
+                    musiK.mp3
+                </p>
+                </a>
+            </div>
+            <div class="exe">
+                <a onclick="project()">
+                    <img loading="lazy" class="icons"
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fhardware-0.png?alt=media&token=347282b1-6809-4a12-8801-1c2ed5e17ac0" />
+                </a>
+                <p>
+                    projects.lib
                 </p>
                 </a>
             </div>
@@ -70,10 +81,10 @@ vzL 98
                         src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fdefragment-1.png?alt=media&token=5802b5d5-9e8e-46e8-ad2c-17771b0f630d" />
                 </a>
                 <p>
-                    3D Art (?)
+                    3D_Art.glb
                 </p>
             </div>
-            <div class="exe" ">
+            <div class="exe">
                 <a onclick=" Creditos()">
                 <img loading="lazy" class="icons"
                     src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fnotepad_file-1.png?alt=media&token=bbd3f757-4fb6-45b0-826e-64877b3c8938" />
@@ -95,30 +106,35 @@ vzL 98
                         DESPUES, AQUI VAN LAS APLICACIONES O ARCHIVOS EXE 
                         DE LA BARRA
                  -->
-                 <button class="windowBtn disable-dbl-tap-zoom" id="creditsBtn" onclick="bringToFront(this)">
+                 <button class="windowBtn disable-dbl-tap-zoom" id="systemBtn">
                     <img loading="lazy" class="imgBtn"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
-                    credits
-                </button>
-                <button class="windowBtn disable-dbl-tap-zoom" id="3dBtn" onclick="bringToFront(this)">
-                    <img loading="lazy" class="imgBtn"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
-                    3d art
-                </button>
-                <button class="windowBtn disable-dbl-tap-zoom" id="aboutBtn" onclick="bringToFront(this)">
-                    <img loading="lazy" class="imgBtn"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
-                    about
-                </button>
-                <button class="windowBtn disable-dbl-tap-zoom" id="systemBtn" onclick="bringToFront(this)">
-                    <img loading="lazy" class="imgBtn"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fhard_disk_drive_cool-5.png?alt=media&token=d2579e61-d427-450b-b72c-0b6d96f33ebe" />
                     system
                 </button>
-                <button class="windowBtn disable-dbl-tap-zoom" id="projectsBtn" onclick="bringToFront(this)">
+                <button class="windowBtn disable-dbl-tap-zoom" id="musikBtn">
                     <img loading="lazy" class="imgBtn"
-                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmultimedia-4.png?alt=media&token=39087fe7-ed62-42df-9b3a-1defba869268" />
+                    musik
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="projectsBtn">
+                    <img loading="lazy" class="imgBtn"
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fhardware-0.png?alt=media&token=347282b1-6809-4a12-8801-1c2ed5e17ac0" />
                     projects
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="aboutBtn">
+                    <img loading="lazy" class="imgBtn"
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fconnected_world-0.png?alt=media&token=70822f6a-c31d-45f9-ac87-3893d56077c7" />
+                    about
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="3dBtn">
+                    <img loading="lazy" class="imgBtn"
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fdefragment-1.png?alt=media&token=5802b5d5-9e8e-46e8-ad2c-17771b0f630d" />
+                    3d art
+                </button>
+                <button class="windowBtn disable-dbl-tap-zoom" id="creditsBtn">
+                    <img loading="lazy" class="imgBtn"
+                    src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fnotepad_file-1.png?alt=media&token=bbd3f757-4fb6-45b0-826e-64877b3c8938" />
+                    credits
                 </button>
 
                 </div>
@@ -355,6 +371,45 @@ vzL 98
                 </div>
             </div>
 
+            <div class="window centrar_ventana" id="ventan_musik">
+                <div class="title-bar">
+                    <div class="title-bar-text">musiK.mp3</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="Close3"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <h2 class="rainbow-effect">!eso no es raaaack!</h2>
+                    <div class="spotify">
+                        <span>Currently Listening 🔊</span>
+                        <iframe frameborder="0" height="160" id="github-iframe" src="" width="100%"></iframe>
+                    </div>
+                    <p style="text-align: center;">terqo sound machine</p>
+                </div>
+              
+
+                <div class="status-bar">
+                    <p class="status-bar-field">Press F5 for help</p>
+                    <p class="status-bar-field">Slide 1</p>
+                    <p class="status-bar-field">CPU Usage: 69%</p>
+                </div>
+            </div>
+            <div class="window centrar_ventana" id="ventan_projects">
+                <div class="title-bar">
+                    <div class="title-bar-text">projects.lib</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="Close8"></button>
+                    </div>
+                </div>
+                <h2>Aun no esta completo</h2>
+                <h2>ik u can wait gg</h2>
+
+                <div class="status-bar">
+                    <p class="status-bar-field">Press F2 for help</p>
+                    <p class="status-bar-field">Slide 1</p>
+                    <p class="status-bar-field">CPU Usage: 69%</p>
+                </div>
+            </div>
             <div class="window" id="ventan_about">
                 <div class="title-bar">
                     <div class="title-bar-text">about.exe</div>
@@ -381,13 +436,7 @@ vzL 98
                         </div>
 
                     </div>
-
-                    <div class="spotify">
-                        <span>Currently Listening 🔊</span>
-                        <iframe frameborder="0" height="160" id="github-iframe" src="" width="100%"></iframe>
-                    </div>
-
-
+                    <br>
                     <div class="box4">
                         <p>Skills</p>
                         <center>

@@ -5,19 +5,27 @@
     const documento = document.getElementById('ventan_document');
     const alerta = document.getElementById('ventan_alert');
     const credits = document.getElementById('ventan_credits');
+    const musik = document.getElementById('ventan_musik');
+    const projects = document.getElementById('ventan_projects');
+
     //botones cerrar divs 
     const btnCerrar = document.getElementById('Close1');
     const btnCerrar2 = document.getElementById('Close2');
+    const btnCerrar3 = document.getElementById('Close3');
     const btnCerrar4 = document.getElementById('Close4');
     const btnCerrar5 = document.getElementById('Close5');
     const btnCerrar6 = document.getElementById('Close6');
     const btnCerrar7 = document.getElementById('Close7');
+    const btnCerrar8 = document.getElementById('Close8');
+
     //botones ventanas
     const creditsBtn = document.getElementById('creditsBtn');
     const Btn3d = document.getElementById('3dBtn');
     const aboutBtn = document.getElementById('aboutBtn');
     const systemBtn = document.getElementById('systemBtn');
     const projectsBtn = document.getElementById('projectsBtn');
+    const musikBtn = document.getElementById('musikBtn');
+
 
 
     function Creditos(){
@@ -47,6 +55,18 @@
     function Docs(){
         documento.style.display = documento.style.display === "none" ? "" : "none";
     }
+    //div_musik
+    function musika(){
+        musik.style.display = musik.style.display === "none" ? "" : "none";
+        musikBtn.style.display = musikBtn.style.display === "none" ? "" : "none";
+        musikBtn.classList.add('active');
+    } 
+    //div_projects
+    function project(){
+        projects.style.display = projects.style.display === "none" ? "" : "none";
+        projectsBtn.style.display = projectsBtn.style.display === "none" ? "" : "none";
+        projectsBtn.classList.add('active');
+    }
     //abrir y cerrar divs
     
     //cerrar
@@ -58,6 +78,11 @@
     btnCerrar2.onclick = function(){
         credits.style.display = credits.style.display === "none" ? "block" : "none";
         creditsBtn.style.display = creditsBtn.style.display === "none" ? "" : "none";
+    }
+    //div3_musik
+    btnCerrar3.onclick = function(){
+        musik.style.display = musik.style.display === "none" ? "block" : "none";
+        musikBtn.style.display = musikBtn.style.display === "none" ? "" : "none";
     }
     //div4_about
     btnCerrar4.onclick = function(){
@@ -77,6 +102,11 @@
     //div7_documents
     btnCerrar7.onclick = function(){
         documento.style.display = documento.style.display === "none" ? "block" : "none";
+    }
+    //div7_projects
+    btnCerrar8.onclick = function(){
+        projects.style.display = projects.style.display === "none" ? "block" : "none";
+        projectsBtn.style.display = projectsBtn.style.display === "none" ? "" : "none";
     }
     //----------------------------------------------------------------
     //script para mover divs dentro del body
@@ -209,6 +239,48 @@
         
     };
     documento.onmouseup = function () {
+        document.onmousemove = null;
+    };
+    //---------------------------------
+    musik.onmousedown = function (e) {
+    
+        var left = parseInt( window.getComputedStyle(musik).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(musik).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
+
+            musik.style.left = left - dx + "px";
+            musik.style.top = top - dy + "px";
+            musik.style.zIndex = i++;
+        };
+        
+    };
+    musik.onmouseup = function () {
+        document.onmousemove = null;
+    };
+    //---------------------------------
+    projects.onmousedown = function (e) {
+    
+        var left = parseInt( window.getComputedStyle(projects).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(projects).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
+
+            projects.style.left = left - dx + "px";
+            projects.style.top = top - dy + "px";
+            projects.style.zIndex = i++;
+        };
+        
+    };
+    projects.onmouseup = function () {
         document.onmousemove = null;
     };
     //---------------------------------

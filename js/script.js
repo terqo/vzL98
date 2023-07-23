@@ -40,13 +40,19 @@ document.getElementById("ventan_about").style.display = "none";
 document.getElementById("ventan_3d").style.display = "none";
 document.getElementById("ventan_sys").style.display = "none";
 document.getElementById("ventan_document").style.display = "none";
+document.getElementById("ventan_musik").style.display = "none";
+document.getElementById("ventan_projects").style.display = "none";
 document.getElementById("menu").style.display = "none";
+
+
 //esconder botones de las ventanas
 document.getElementById("creditsBtn").style.display = "none";
 document.getElementById("3dBtn").style.display = "none";
 document.getElementById("aboutBtn").style.display = "none";
 document.getElementById("systemBtn").style.display = "none";
 document.getElementById("projectsBtn").style.display = "none";
+document.getElementById("musikBtn").style.display = "none";
+
 
 //inicio boton home menu Windows
 const abrirMenu = document.getElementById('menu');
@@ -57,16 +63,6 @@ function AbrirMenu(){
     abrirMenu.style.display = abrirMenu.style.display === "none" ? "block" : "none";
     btnMenu.classList.contains('active') ? btnMenu.classList.remove('active') : btnMenu.classList.add('active');
 }
-
-// //---------------------------------------------------
-// const cerrarMenu = document.getElementById('menu');
-
-
-// btnMenu.onclick = function(){
-//     cerrarMenu.style.display = cerrarMenu.style.display === "none" ? "block" : "none";
-//     btnMenu.classList.remove('active'); 
-
-// }
 
 //---------------------------------------------------------------
 //spotify
