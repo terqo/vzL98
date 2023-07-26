@@ -61,10 +61,10 @@ body {
 }
 .about_container{
     padding: 30px;
+    font-size: 12.5px;
 }
 @media (min-width: 768px) {
     .about_container{
-        text-align: center;
         font-size: 14px;
     }
     .about_container h5{
@@ -155,9 +155,7 @@ a:visited {
 .barra {
     position: absolute;
     display: flex;
-    /* establish flex container */
     flex-direction: row;
-    /* default value; can be omitted */
     flex-wrap: nowrap;
     position: fixed;
     left: 0;
@@ -179,21 +177,16 @@ a:visited {
     flex: 1;
     height: 100%;
     min-width: 0;
-       /* reset implicit min-width from flexbox */
 }
 .bandeja {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
-    /* align-content: center; */
-    /* justify-content: center; */
     line-height: 22px;
     box-sizing: border-box;
     vertical-align: middle;
 }
 
 .inicioBtn {
-    /*pointer-events: none;*/
     font-weight: bold;
     margin: 5px;
     margin-left: 8px;
@@ -246,8 +239,6 @@ a:visited {
     height: 20px;
     width: 80px;
     text-align: center;
-    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
-        inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
 .icons {
@@ -296,6 +287,7 @@ a:visited {
 .boxContainer{
     display:flex;
     height: 80px;
+    text-align: center;
     width: 100%;
 }
 
