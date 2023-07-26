@@ -94,6 +94,7 @@ body {
     padding: 30px;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align: justify;
 }
 @media (max-width: 390px) {
     .ventan_projects{
