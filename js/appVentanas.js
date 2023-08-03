@@ -7,6 +7,8 @@
     const credits = document.getElementById('ventan_credits');
     const musik = document.getElementById('ventan_musik');
     const projects = document.getElementById('ventan_projects');
+    const mail = document.getElementById('ventan_mail');
+
 
     //botones cerrar divs 
     const btnCerrar = document.getElementById('Close1');
@@ -17,6 +19,7 @@
     const btnCerrar6 = document.getElementById('Close6');
     const btnCerrar7 = document.getElementById('Close7');
     const btnCerrar8 = document.getElementById('Close8');
+    const btnCerrar9 = document.getElementById('Close9');
 
     //botones ventanas
     const creditsBtn = document.getElementById('creditsBtn');
@@ -25,8 +28,7 @@
     const systemBtn = document.getElementById('systemBtn');
     const projectsBtn = document.getElementById('projectsBtn');
     const musikBtn = document.getElementById('musikBtn');
-
-
+    const mailBtn = document.getElementById('mailBtn');
 
     function Creditos(){
         credits.style.display = credits.style.display === "none" ? "" : "none";
@@ -66,6 +68,12 @@
         projects.style.display = projects.style.display === "none" ? "" : "none";
         projectsBtn.style.display = projectsBtn.style.display === "none" ? "" : "none";
         projectsBtn.classList.add('active');
+    }
+    //div mail
+    function Mail(){
+        mail.style.display = mail.style.display === "none" ? "" : "none";
+        mailBtn.style.display = mailBtn.style.display === "none" ? "" : "none";
+        mailBtn.classList.add('active'); 
     }
     //abrir y cerrar divs
     
@@ -107,6 +115,11 @@
     btnCerrar8.onclick = function(){
         projects.style.display = projects.style.display === "none" ? "block" : "none";
         projectsBtn.style.display = projectsBtn.style.display === "none" ? "" : "none";
+    }
+    //div_mail
+    btnCerrar9.onclick = function(){
+        mail.style.display = mail.style.display === "none" ? "block" : "none";
+        mailBtn.style.display = mailBtn.style.display === "none" ? "" : "none";
     }
     //----------------------------------------------------------------
     //script para mover divs dentro del body
@@ -287,3 +300,25 @@
     function bringToFront() {
         document.style.zIndex = i++;
     }
+    //---------------------------------
+    mail.onmousedown = function (e) {
+    
+        var left = parseInt( window.getComputedStyle(mail).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(mail).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
+
+            mail.style.left = left - dx + "px";
+            mail.style.top = top - dy + "px";
+            mail.style.zIndex = i++;
+        };
+        
+    };
+    mail.onmouseup = function () {
+        document.onmousemove = null;
+    };
+    //---------------------------------

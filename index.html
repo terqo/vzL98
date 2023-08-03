@@ -85,6 +85,15 @@ vzL 98
                 </p>
             </div>
             <div class="exe">
+                <a onclick="Mail()">
+                    <img loading="lazy" class="icons"
+                        src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmailbox_world-2.png?alt=media&token=b2fbe7ce-2ec4-44c6-b1b8-ec3afcfb6715" />
+                </a>
+                <p>
+                    mail.exe
+                </p>
+            </div>
+            <div class="exe">
                 <a onclick=" Creditos()">
                     <img loading="lazy" class="icons"
                         src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fnotepad_file-1.png?alt=media&token=bbd3f757-4fb6-45b0-826e-64877b3c8938" />
@@ -130,6 +139,11 @@ vzL 98
                         <img loading="lazy" class="imgBtn"
                             src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fdefragment-1.png?alt=media&token=5802b5d5-9e8e-46e8-ad2c-17771b0f630d" />
                         3d art
+                    </button>
+                    <button class="windowBtn disable-dbl-tap-zoom" id="mailBtn">
+                        <img loading="lazy" class="imgBtn"
+                            src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fmailbox_world-0.png?alt=media&token=64059274-4d88-4543-94db-d4526788c2f9" />
+                        mail
                     </button>
                     <button class="windowBtn disable-dbl-tap-zoom" id="creditsBtn">
                         <img loading="lazy" class="imgBtn"
@@ -503,7 +517,8 @@ vzL 98
                     <br>
                     <div class="box4 active">
                         <h5>About me</h5>
-                        <p>Hi!! I am <img  class="oscar" src="/images/oscar.png" alt="The Oscar"> from México City and i am a full-stack developer.</p>
+                        <p>Hi!! I am <img class="oscar" src="/images/oscar.png" alt="The Oscar"> from México City and i
+                            am a full-stack developer.</p>
                         <h5>Skills</h5>
                         <center>
                             <img src="https://img.shields.io/badge/-HTML%2FCSS-green" alt="">
@@ -634,6 +649,32 @@ vzL 98
                     <p class="status-bar-field">Press F1 for help</p>
                     <p class="status-bar-field">Slide 1</p>
                     <p class="status-bar-field">CPU Usage: 54%</p>
+                </div>
+            </div>
+            <div class="window centrar_ventana" id="ventan_mail">
+                <div class="title-bar">
+                    <div class="title-bar-text">mail.exe</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="Close9"></button>
+                    </div>
+                </div>
+                <div class="ventan_musik">
+                    <h4 style="margin: 15px;" id="mailSubject">New Email</h4>
+                    <form name="correo" action="" method="post" data-netlify="true">
+                        <div class="field-row-stacked" style="max-width: 100%;">
+                            <div class="field-row">
+                                <label for="text21">To:</label>
+                                <input id="text21" disabled type="text" value="Oscar" />
+                                <input style="cursor: pointer;" type="submit" value="Send"></input>
+                            </div>
+                            <label for="text21">From:</label>
+                            <input name="email" id="text21" type="email" placeholder="admin@contoso.com" />
+                            <label for="text22">Subject:</label>
+                            <input name="asunto del correo" id="text22" type="text" placeholder="New Email" />
+                            <label for="text23">Additional notes</label>
+                            <textarea name="email-text" id="text23" style="resize: none" rows="8"></textarea>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="window centrar_ventana" id="ventan_alert">

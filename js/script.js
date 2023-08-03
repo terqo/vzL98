@@ -1,3 +1,24 @@
+//esconder todas las ventanas
+//document.getElementById("ventan_alert").style.display = "none";
+document.getElementById("ventan_credits").style.display = "none";
+document.getElementById("ventan_about").style.display = "none";
+document.getElementById("ventan_3d").style.display = "none";
+document.getElementById("ventan_sys").style.display = "none";
+document.getElementById("ventan_document").style.display = "none";
+document.getElementById("ventan_musik").style.display = "none";
+document.getElementById("ventan_projects").style.display = "none";
+document.getElementById("ventan_mail").style.display = "none";
+document.getElementById("menu").style.display = "none";
+
+//esconder botones de las ventanas
+document.getElementById("creditsBtn").style.display = "none";
+document.getElementById("3dBtn").style.display = "none";
+document.getElementById("aboutBtn").style.display = "none";
+document.getElementById("systemBtn").style.display = "none";
+document.getElementById("projectsBtn").style.display = "none";
+document.getElementById("musikBtn").style.display = "none";
+document.getElementById("mailBtn").style.display = "none";
+
 //reloj que marca la hora exacta de tu ubicacion u ip
 setInterval(displayClock, 1000);
 function displayClock() {
@@ -33,27 +54,6 @@ function nicknames() {
  document.getElementById('nicknames').value = nicks[Math.floor(Math.random() * nicks.length)]       
 }
 
-//esconder todas las ventanas
-//document.getElementById("ventan_alert").style.display = "none";
-document.getElementById("ventan_credits").style.display = "none";
-document.getElementById("ventan_about").style.display = "none";
-document.getElementById("ventan_3d").style.display = "none";
-document.getElementById("ventan_sys").style.display = "none";
-document.getElementById("ventan_document").style.display = "none";
-document.getElementById("ventan_musik").style.display = "none";
-document.getElementById("ventan_projects").style.display = "none";
-document.getElementById("menu").style.display = "none";
-
-
-//esconder botones de las ventanas
-document.getElementById("creditsBtn").style.display = "none";
-document.getElementById("3dBtn").style.display = "none";
-document.getElementById("aboutBtn").style.display = "none";
-document.getElementById("systemBtn").style.display = "none";
-document.getElementById("projectsBtn").style.display = "none";
-document.getElementById("musikBtn").style.display = "none";
-
-
 //inicio boton home menu Windows
 const abrirMenu = document.getElementById('menu');
 const btnMenu = document.getElementById('menuBtn');
@@ -79,3 +79,21 @@ fetch(
         "data:text/html;charset=utf-8;base64," +
         encodeURIComponent(data["content"]);
 });
+//---------------------------------------------------------------
+
+//email text
+const inputElement = document.getElementById('text22');
+const h4Element = document.getElementById('mailSubject');
+
+// Evento onInput para actualizar el h4 cada vez que se escribe en el input
+inputElement.addEventListener('input', () => {
+  const inputValue = inputElement.value.trim(); // Obtener el valor del input sin espacios en blanco al principio o al final
+
+  // Verificar si el input está vacío
+  if (inputValue === '') {
+    h4Element.textContent = 'New Email'; // Restablecer el valor del h4 a "New Email"
+  } else {
+    h4Element.textContent = inputValue; // Actualizar el h4 con el contenido del input
+  }
+});
+//---------------------------------------------------------------
