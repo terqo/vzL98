@@ -9,6 +9,8 @@ document.getElementById("ventan_musik").style.display = "none";
 document.getElementById("ventan_projects").style.display = "none";
 document.getElementById("ventan_mail").style.display = "none";
 document.getElementById("menu").style.display = "none";
+document.getElementById("ventan_chatbot").style.display = "none";
+
 
 //esconder botones de las ventanas
 document.getElementById("creditsBtn").style.display = "none";
@@ -18,6 +20,8 @@ document.getElementById("systemBtn").style.display = "none";
 document.getElementById("projectsBtn").style.display = "none";
 document.getElementById("musikBtn").style.display = "none";
 document.getElementById("mailBtn").style.display = "none";
+document.getElementById("chatBtn").style.display = "none";
+
 
 //reloj que marca la hora exacta de tu ubicacion u ip
 setInterval(displayClock, 1000);

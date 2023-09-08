@@ -8,6 +8,8 @@
     const musik = document.getElementById('ventan_musik');
     const projects = document.getElementById('ventan_projects');
     const mail = document.getElementById('ventan_mail');
+    const chatbut = document.getElementById('ventan_chatbot');
+
 
 
     //botones cerrar divs 
@@ -20,6 +22,8 @@
     const btnCerrar7 = document.getElementById('Close7');
     const btnCerrar8 = document.getElementById('Close8');
     const btnCerrar9 = document.getElementById('Close9');
+    const btnCerrar10 = document.getElementById('Close10');
+
 
     //botones ventanas
     const creditsBtn = document.getElementById('creditsBtn');
@@ -29,6 +33,8 @@
     const projectsBtn = document.getElementById('projectsBtn');
     const musikBtn = document.getElementById('musikBtn');
     const mailBtn = document.getElementById('mailBtn');
+    const chatBtn = document.getElementById('chatBtn');
+
 
     function Creditos(){
         credits.style.display = credits.style.display === "none" ? "" : "none";
@@ -75,6 +81,12 @@
         mailBtn.style.display = mailBtn.style.display === "none" ? "" : "none";
         mailBtn.classList.add('active'); 
     }
+    //div chat
+    function Chat(){
+        chatbut.style.display = chatbut.style.display === "none" ? "" : "none";
+        chatBtn.style.display = chatBtn.style.display === "none" ? "" : "none";
+        chatBtn.classList.add('active'); 
+    }
     //abrir y cerrar divs
     
     //cerrar
@@ -120,6 +132,11 @@
     btnCerrar9.onclick = function(){
         mail.style.display = mail.style.display === "none" ? "block" : "none";
         mailBtn.style.display = mailBtn.style.display === "none" ? "" : "none";
+    }
+    //div_mail
+    btnCerrar10.onclick = function(){
+        chatbut.style.display = chatbut.style.display === "none" ? "block" : "none";
+        chatBtn.style.display = chatBtn.style.display === "none" ? "" : "none";
     }
     //----------------------------------------------------------------
     //script para mover divs dentro del body
@@ -319,6 +336,27 @@
         
     };
     mail.onmouseup = function () {
+        document.onmousemove = null;
+    };
+    //---------------------------------
+    chatbut.onmousedown = function (e) {
+    
+        var left = parseInt( window.getComputedStyle(chatbut).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(chatbut).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
+
+            chatbut.style.left = left - dx + "px";
+            chatbut.style.top = top - dy + "px";
+            chatbut.style.zIndex = i++;
+        };
+        
+    };
+    chatbut.onmouseup = function () {
         document.onmousemove = null;
     };
     //---------------------------------
