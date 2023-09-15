@@ -1,7 +1,7 @@
 const form = document.getElementById("chat-form");
 const input = document.getElementById("chat-input");
 const messages = document.getElementById("chat-messages");
-const iave = "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";
+const iave = "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";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
