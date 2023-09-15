@@ -390,3 +390,65 @@ h2.rainbow-effect {
         width: 10%;
     }
 }
+
+/* chatbot */
+  
+  #chat-messages {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    height: 15rem;
+    overflow: auto;
+  }
+  
+  #chat-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    font-weight: bold;
+  }
+  .bot-message {
+    font-family: "Roboto", sans-serif;
+    background-color: #fffbf5; /* different light color */
+    text-align: justify; /* keep it right-aligned */
+    padding: 15px; /* added padding */
+    margin-top: 10px; /* added margin-top to create a gap */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  
+  .user-message {
+    font-family: "Nunito", sans-serif;
+    background-color: rgb(158, 155, 155); /* light color */
+    text-align: left; /* changed text align to left */
+    padding: 15px; /* added padding */
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  .user-message img,
+  .bot-message img {
+    width: 40px; /* adjust the width of the icon */
+    height: 40px; /* adjust the height of the icon */
+    margin-right: 20px; /* add some margin to separate the icon from the message */
+  }
+ 
+  .main-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 0.5rem;
+  }
