@@ -36,6 +36,10 @@ body {
     top: 0%;
     left: 0%;
     transform: translate(0%, 0%);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .spotify{

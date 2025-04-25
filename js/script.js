@@ -62,11 +62,38 @@ function nicknames() {
 const abrirMenu = document.getElementById('menu');
 const btnMenu = document.getElementById('menuBtn');
 
-
-function AbrirMenu(){
-    abrirMenu.style.display = abrirMenu.style.display === "none" ? "block" : "none";
-    btnMenu.classList.contains('active') ? btnMenu.classList.remove('active') : btnMenu.classList.add('active');
+// Función para cerrar el menú
+function cerrarMenu() {
+    abrirMenu.style.display = "none";
+    btnMenu.classList.remove('active');
 }
+
+function AbrirMenu(event){
+    // Detener la propagación del evento para que no llegue al document
+    event.stopPropagation();
+    
+    if (abrirMenu.style.display === "none") {
+        abrirMenu.style.display = "block";
+        btnMenu.classList.add('active');
+    } else {
+        cerrarMenu();
+    }
+}
+
+// Event listener para cerrar el menú cuando se hace clic en cualquier parte del documento
+document.addEventListener('click', function(event) {
+    // Si el menú está abierto y el clic no fue en el menú ni en el botón de inicio
+    if (abrirMenu.style.display === "block" && 
+        !abrirMenu.contains(event.target) && 
+        !btnMenu.contains(event.target)) {
+        cerrarMenu();
+    }
+});
+
+// Prevenir que los clics dentro del menú cierren el menú
+abrirMenu.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
 
 //---------------------------------------------------------------
 //spotify

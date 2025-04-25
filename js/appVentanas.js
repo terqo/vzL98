@@ -142,8 +142,7 @@
     //script para mover divs dentro del body
     var i = 0;
 
-    alerta.onmousedown = function (e) {
-
+    alerta.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(alerta).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(alerta).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -159,13 +158,12 @@
         };
     };
 
-    alerta.onmouseup = function () {
+    alerta.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
 
     //---------------------------------
-    credits.onmousedown = function (e) {
-
+    credits.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(credits).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(credits).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -179,16 +177,14 @@
             credits.style.top = top - dy + "px";
             credits.style.zIndex = i++;
         };
-
     };
 
-    credits.onmouseup = function () {
+    credits.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
 
     //---------------------------------
-    about.onmousedown = function (e) {
-
+    about.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(about).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(about).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -201,37 +197,36 @@
             about.style.left = left - dx + "px";
             about.style.top = top - dy + "px";
             about.style.zIndex = i++;
-            
         };
     };
 
-    about.onmouseup = function () {
+    about.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
-        // tresd.onmousedown = function (e) {
+    tresd.querySelector('.title-bar').onmousedown = function (e) {
+        var left = parseInt( window.getComputedStyle(tresd).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(tresd).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
 
-        //     var left = parseInt( window.getComputedStyle(tresd).getPropertyValue("left") );
-        //     var top = parseInt( window.getComputedStyle(tresd).getPropertyValue("top") );
-        //     var mouseX = e.clientX;
-        //     var mouseY = e.clientY;
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
 
-        //     document.onmousemove = function (e) {
-        //         var dx = mouseX - e.clientX;
-        //         var dy = mouseY - e.clientY;
+            tresd.style.left = left - dx + "px";
+            tresd.style.top = top - dy + "px";
+            tresd.style.zIndex = i++;
+        };
+    };
 
-        //         tresd.style.left = left - dx + "px";
-        //         tresd.style.top = top - dy + "px";
-        //         tresd.style.zIndex = i++;
-        //     };
-        // };
+    tresd.querySelector('.title-bar').onmouseup = function () {
+        document.onmousemove = null;
+    };
 
-        // tresd.onmouseup = function () {
-        //     document.onmousemove = null;
-        // };
     //---------------------------------
-    sys.onmousedown = function (e) {
-        
+    sys.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(sys).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(sys).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -247,12 +242,12 @@
         };
     };
 
-    sys.onmouseup = function () {
+    sys.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
-    documento.onmousedown = function (e) {
-    
+    documento.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(documento).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(documento).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -266,14 +261,14 @@
             documento.style.top = top - dy + "px";
             documento.style.zIndex = i++;
         };
-        
     };
-    documento.onmouseup = function () {
+
+    documento.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
-    musik.onmousedown = function (e) {
-    
+    musik.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(musik).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(musik).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -287,14 +282,14 @@
             musik.style.top = top - dy + "px";
             musik.style.zIndex = i++;
         };
-        
     };
-    musik.onmouseup = function () {
+
+    musik.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
-    projects.onmousedown = function (e) {
-    
+    projects.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(projects).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(projects).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -308,18 +303,19 @@
             projects.style.top = top - dy + "px";
             projects.style.zIndex = i++;
         };
-        
     };
-    projects.onmouseup = function () {
+
+    projects.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
     function bringToFront() {
         document.style.zIndex = i++;
     }
+
     //---------------------------------
-    mail.onmousedown = function (e) {
-    
+    mail.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(mail).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(mail).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -333,14 +329,14 @@
             mail.style.top = top - dy + "px";
             mail.style.zIndex = i++;
         };
-        
     };
-    mail.onmouseup = function () {
+
+    mail.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+
     //---------------------------------
-    chatbut.onmousedown = function (e) {
-    
+    chatbut.querySelector('.title-bar').onmousedown = function (e) {
         var left = parseInt( window.getComputedStyle(chatbut).getPropertyValue("left") );
         var top = parseInt( window.getComputedStyle(chatbut).getPropertyValue("top") );
         var mouseX = e.clientX;
@@ -354,9 +350,9 @@
             chatbut.style.top = top - dy + "px";
             chatbut.style.zIndex = i++;
         };
-        
     };
-    chatbut.onmouseup = function () {
+
+    chatbut.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
     //---------------------------------

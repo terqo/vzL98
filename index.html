@@ -113,7 +113,7 @@ vzL 98
             </div>
 
             <div class="barra">
-                <button class="inicioBtn disable-dbl-tap-zoom" id="menuBtn" onclick="AbrirMenu()">
+                <button class="inicioBtn disable-dbl-tap-zoom" id="menuBtn" onclick="AbrirMenu(event)">
                     <img loading="lazy"
                         src="https://firebasestorage.googleapis.com/v0/b/vzl95-9abcf.appspot.com/o/iconos95%2Fwindows-4.png?alt=media&token=4964857d-be73-410a-9c13-7f772d401eb0">
                     Start
@@ -591,7 +591,6 @@ vzL 98
                     </div>
                 </div>
                 <div class="window-body ventan_3d">
-                    <h2 style="color: red; text-align: center;">u can't move this window! u.u</h2>
                     <model-viewer bounds="tight" src="3dFiles/statue.glb" ar ar-modes="webxr scene-viewer quick-look"
                         camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1.6"
                         exposure="2">
