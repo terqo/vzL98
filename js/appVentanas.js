@@ -9,6 +9,7 @@
     const projects = document.getElementById('ventan_projects');
     const mail = document.getElementById('ventan_mail');
     const chatbut = document.getElementById('ventan_chatbot');
+    const dominios = document.getElementById('ventan_dominios');
 
 
 
@@ -23,6 +24,7 @@
     const btnCerrar8 = document.getElementById('Close8');
     const btnCerrar9 = document.getElementById('Close9');
     const btnCerrar10 = document.getElementById('Close10');
+    const btnCerrar11 = document.getElementById('Close11');
 
 
     //botones ventanas
@@ -34,6 +36,7 @@
     const musikBtn = document.getElementById('musikBtn');
     const mailBtn = document.getElementById('mailBtn');
     const chatBtn = document.getElementById('chatBtn');
+    const dominiosBtn = document.getElementById('dominiosBtn');
 
 
     function Creditos(){
@@ -87,6 +90,12 @@
         chatBtn.style.display = chatBtn.style.display === "none" ? "" : "none";
         chatBtn.classList.add('active'); 
     }
+    //div_dominios
+    function Dominios(){
+        dominios.style.display = dominios.style.display === "none" ? "" : "none";
+        dominiosBtn.style.display = dominiosBtn.style.display === "none" ? "" : "none";
+        dominiosBtn.classList.add('active'); 
+    }
     //abrir y cerrar divs
     
     //cerrar
@@ -137,6 +146,11 @@
     btnCerrar10.onclick = function(){
         chatbut.style.display = chatbut.style.display === "none" ? "block" : "none";
         chatBtn.style.display = chatBtn.style.display === "none" ? "" : "none";
+    }
+    //div_dominios
+    btnCerrar11.onclick = function(){
+        dominios.style.display = dominios.style.display === "none" ? "block" : "none";
+        dominiosBtn.style.display = dominiosBtn.style.display === "none" ? "" : "none";
     }
     //----------------------------------------------------------------
     //script para mover divs dentro del body
@@ -353,6 +367,27 @@
     };
 
     chatbut.querySelector('.title-bar').onmouseup = function () {
+        document.onmousemove = null;
+    };
+
+    //---------------------------------
+    dominios.querySelector('.title-bar').onmousedown = function (e) {
+        var left = parseInt( window.getComputedStyle(dominios).getPropertyValue("left") );
+        var top = parseInt( window.getComputedStyle(dominios).getPropertyValue("top") );
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        document.onmousemove = function (e) {
+            var dx = mouseX - e.clientX;
+            var dy = mouseY - e.clientY;
+
+            dominios.style.left = left - dx + "px";
+            dominios.style.top = top - dy + "px";
+            dominios.style.zIndex = i++;
+        };
+    };
+
+    dominios.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
     //---------------------------------

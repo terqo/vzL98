@@ -456,3 +456,40 @@ h2.rainbow-effect {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin-bottom: 0.5rem;
   }
+
+.ventan_dominios {
+    width: 600px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.domains_section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #808080;
+    background-color: #fff;
+}
+
+.domains_section h2 {
+    color: #000080;
+    margin-bottom: 10px;
+}
+
+.domains_section p {
+    margin: 5px 0;
+    color: #000;
+}
+
+.domains_section a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .ventan_dominios {
+        width: 300px;
+    }
+}
