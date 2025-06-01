@@ -462,6 +462,15 @@ h2.rainbow-effect {
     padding: 20px;
     overflow-y: auto;
     max-height: 500px;
+    box-sizing: border-box;
+}
+
+.ventan_dominios h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .domains_section {
@@ -469,16 +478,24 @@ h2.rainbow-effect {
     padding: 15px;
     border: 1px solid #808080;
     background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .domains_section h2 {
     color: #000080;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .domains_section p {
     margin: 5px 0;
     color: #000;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
 }
 
 .domains_section a {
@@ -486,10 +503,58 @@ h2.rainbow-effect {
     margin-top: 10px;
     color: #0000ff;
     text-decoration: underline;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
     .ventan_dominios {
-        width: 300px;
+        width: 90vw;
+        max-width: 350px;
+        padding: 15px;
+    }
+    
+    .ventan_dominios h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .domains_section {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .domains_section h2 {
+        font-size: 16px;
+    }
+    
+    .domains_section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ventan_dominios {
+        width: 95vw;
+        max-width: 300px;
+        padding: 10px;
+    }
+    
+    .ventan_dominios h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .domains_section {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .domains_section h2 {
+        font-size: 14px;
+    }
+    
+    .domains_section p {
+        font-size: 12px;
     }
 }
