@@ -39,6 +39,11 @@
     const dominiosBtn = document.getElementById('dominiosBtn');
 
 
+    //div_alert
+    function HideAlert(){
+        alerta.style.display = "none";
+    }
+
     function Creditos(){
         credits.style.display = credits.style.display === "none" ? "" : "none";
         creditsBtn.style.display = creditsBtn.style.display === "none" ? "" : "none";
@@ -390,4 +395,58 @@
     dominios.querySelector('.title-bar').onmouseup = function () {
         document.onmousemove = null;
     };
+    //---------------------------------
+
+
+    (function openWindowFromUrl() {
+        function getOpenIds() {
+            var hash = (window.location.hash || '').slice(1).trim();
+            if (hash) return [hash];
+
+            var params = new URLSearchParams(window.location.search);
+            var raw = [];
+            raw = raw.concat(params.getAll('open'), params.getAll('id'));
+
+            var ids = [];
+            raw.forEach(function (value) {
+                if (!value) return;
+                value.split(',').forEach(function (part) {
+                    var cleaned = part.trim();
+                    if (cleaned) ids.push(cleaned);
+                });
+            });
+
+            return ids;
+        }
+
+        function normalizeId(str) {
+            return str.toLowerCase().replace('btn', '');
+        }
+
+        var map = {
+            'chat': Chat,
+            'dominios': Dominios,
+            'about': About,
+            'credits': Creditos,
+            'creditos': Creditos,
+            '3d': TRESD,
+            '3dart': TRESD,
+            'mail': Mail,
+            'projects': project,
+            'musik': musika,
+            'system': System
+        };
+
+        var ids = getOpenIds().map(normalizeId);
+        if (!ids.length) return;
+
+        var seen = {};
+        ids.forEach(function (id) {
+            var fn = map[id];
+            if (fn && !seen[id]) {
+                seen[id] = true;
+                setTimeout(fn, 50);
+            }
+        });
+    })();
     //---------------------------------

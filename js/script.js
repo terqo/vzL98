@@ -1,5 +1,5 @@
 //esconder todas las ventanas
-//document.getElementById("ventan_alert").style.display = "none";
+document.getElementById("ventan_alert").style.display = "none";
 document.getElementById("ventan_credits").style.display = "none";
 document.getElementById("ventan_about").style.display = "none";
 document.getElementById("ventan_3d").style.display = "none";
