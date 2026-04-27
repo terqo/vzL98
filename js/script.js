@@ -55,7 +55,7 @@ function displayClock() {
 
 }
 //random nicknames
-var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'secunene','44hz', 'oscarDGAF', 'estarqui','terqoo','140hz','oscar'];
+var nicks = ['keepitdopecop', 'oscrack', 'oscar@blue', 'oscarvzn', 'secunene','44hz', 'oscarDGAF', 'estarqui','terqoo','secunene','140hz','oscar'];
 function nicknames() {
  document.getElementById('nicknames').value = nicks[Math.floor(Math.random() * nicks.length)]       
 }
